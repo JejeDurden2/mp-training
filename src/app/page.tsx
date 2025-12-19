@@ -126,9 +126,37 @@ export default function MPTrainingLanding() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-wider text-center mb-4 sm:mb-6">CONTACTEZ-NOUS</h2>
           <div className="w-16 h-px bg-white mx-auto mb-10 sm:mb-16" />
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-start">
-            {/* Google Maps */}
-            <div className="w-full h-64 sm:h-80 lg:h-96 bg-zinc-900 relative order-2 lg:order-1">
+          
+          {/* Contact Info - 3 columns */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-6 lg:gap-10 mb-12 sm:mb-16">
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-4 border border-white/30 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+              </div>
+              <p className="font-semibold text-white tracking-wider text-sm mb-2">ADRESSE</p>
+              <p className="text-gray-400 text-sm">20 Rue Théodore de Banville</p>
+              <p className="text-gray-400 text-sm">06100 Nice</p>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-4 border border-white/30 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+              </div>
+              <p className="font-semibold text-white tracking-wider text-sm mb-2">TÉLÉPHONE</p>
+              <a href="tel:0627683343" className="text-gray-400 text-sm hover:text-white transition">06 27 68 33 43</a>
+            </div>
+            <div className="text-center">
+              <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto mb-4 border border-white/30 rounded-full flex items-center justify-center">
+                <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </div>
+              <p className="font-semibold text-white tracking-wider text-sm mb-2">HORAIRES</p>
+              <p className="text-gray-400 text-sm">Lun - Sam : 8h - 21h</p>
+              <p className="text-gray-500 text-sm">Sur rendez-vous</p>
+            </div>
+          </div>
+
+          {/* Google Maps - Full width */}
+          <div className="relative">
+            <div className="w-full h-64 sm:h-72 lg:h-80">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5!2d7.2615!3d43.7055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0f5e9c1f9a1%3A0x0!2s20%20Rue%20Th%C3%A9odore%20de%20Banville%2C%2006100%20Nice!5e0!3m2!1sfr!2sfr!4v1699999999999!5m2!1sfr!2sfr"
                 width="100%"
@@ -139,38 +167,16 @@ export default function MPTrainingLanding() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="MP Training Nice - 20 Rue Théodore de Banville"
               />
-              <div className="absolute inset-0 border border-white/10 pointer-events-none" />
             </div>
-            
-            {/* Contact Info */}
-            <div className="text-center lg:text-left order-1 lg:order-2">
-            <address className="not-italic space-y-6 sm:space-y-8 text-gray-300">
-              <div className="flex flex-col items-center lg:items-start gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                <p className="font-semibold text-white text-base sm:text-lg">Adresse</p>
-                <p className="text-sm sm:text-base">20 Rue Théodore de Banville</p>
-                <p className="text-sm sm:text-base">06100 Nice</p>
-              </div>
-              <div className="w-12 sm:w-16 h-px bg-white/20 mx-auto lg:mx-0" />
-              <div className="flex flex-col items-center lg:items-start gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
-                <p className="font-semibold text-white text-base sm:text-lg">Téléphone</p>
-                <a href="tel:0627683343" className="text-lg sm:text-xl hover:text-white transition">06 27 68 33 43</a>
-              </div>
-              <div className="w-12 sm:w-16 h-px bg-white/20 mx-auto lg:mx-0" />
-              <div className="flex flex-col items-center lg:items-start gap-2">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8 mb-1 sm:mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                <p className="font-semibold text-white text-base sm:text-lg">Horaires</p>
-                <p className="text-sm sm:text-base">Lundi - Samedi : 8h - 21h</p>
-                <p className="text-gray-500 text-sm sm:text-base">Dimanche : Fermé</p>
-                <p className="text-xs sm:text-sm text-gray-500">Sur rendez-vous uniquement</p>
-              </div>
-            </address>
-            <div className="flex justify-center lg:justify-start gap-3 sm:gap-4 mt-8 sm:mt-10">
-              <a href="#" aria-label="Facebook MP Training" className="w-10 h-10 sm:w-12 sm:h-12 border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"><svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-              <a href="#" aria-label="Instagram MP Training" className="w-10 h-10 sm:w-12 sm:h-12 border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"><svg className="w-4 h-4 sm:w-5 sm:h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-            </div>
-            <a href="tel:0627683343" className="inline-block mt-8 sm:mt-10 border-2 border-white px-8 sm:px-10 py-3 sm:py-4 text-sm tracking-widest hover:bg-white hover:text-black transition duration-300">APPELEZ-NOUS</a>
+            <div className="absolute inset-0 border border-white/10 pointer-events-none" />
+          </div>
+
+          {/* CTA & Social */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-10 sm:mt-12">
+            <a href="tel:0627683343" className="border-2 border-white px-8 sm:px-10 py-3 sm:py-4 text-sm tracking-widest hover:bg-white hover:text-black transition duration-300">APPELEZ-NOUS</a>
+            <div className="flex gap-3">
+              <a href="#" aria-label="Facebook MP Training" className="w-10 h-10 sm:w-11 sm:h-11 border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"><svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+              <a href="#" aria-label="Instagram MP Training" className="w-10 h-10 sm:w-11 sm:h-11 border border-white/30 flex items-center justify-center hover:bg-white hover:text-black transition"><svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
             </div>
           </div>
         </div>
@@ -179,7 +185,7 @@ export default function MPTrainingLanding() {
       {/* Footer */}
       <footer className="py-6 sm:py-8 px-4 sm:px-6 bg-black border-t border-white/10">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-500">
-          <p className="text-center sm:text-left">© 2026 MP Training Nice - Coach sportif privé</p>
+          <p className="text-center sm:text-left">© 2024 MP Training Nice - Coach sportif privé</p>
           <div className="flex gap-4 sm:gap-6">
             <a href="#" className="hover:text-white transition">Mentions légales</a>
             <a href="#" className="hover:text-white transition">Confidentialité</a>
