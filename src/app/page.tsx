@@ -73,7 +73,7 @@ export default function MPTrainingLanding() {
               <p className="text-gray-300 leading-relaxed text-sm sm:text-base">Situés au <strong>20 Rue Théodore de Banville</strong> dans le quartier des Musiciens, nous vous accueillons du lundi au samedi pour des séances individuelles ou en petit groupe.</p>
             </div>
             <div className="relative order-1 lg:order-2">
-              <img src="room2.jpeg" alt="Séance de personal training à Nice" className="w-full h-64 sm:h-80 lg:h-96 object-cover" />
+              <img src="/images/room2.jpeg" alt="Séance de personal training à Nice" className="w-full h-64 sm:h-80 lg:h-96 object-cover" />
               <div className="absolute inset-0 border border-white/20" />
             </div>
           </div>
