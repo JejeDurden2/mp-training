@@ -20,7 +20,13 @@ export default function MPTrainingLanding() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
-          <a href="#" className="text-xl sm:text-2xl font-bold tracking-wider">MP TRAINING</a>
+          <a href="#" className="block">
+            <img 
+              src="/images/logo.jpeg" 
+              alt="MP Training Nice - Coaching sportif privé" 
+              className="h-8 sm:h-10 w-auto"
+            />
+          </a>
           <div className="hidden lg:flex items-center gap-6 xl:gap-8 text-sm tracking-widest">
             <a href="#studio" className="hover:text-gray-400 transition">LE STUDIO</a>
             <a href="#services" className="hover:text-gray-400 transition">SERVICES</a>
