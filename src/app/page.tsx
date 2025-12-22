@@ -5,14 +5,14 @@ export default function MPTrainingLanding() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const coaches = [
-    { name: "LÉO PAULET-VOLPINI", role: "FONDATEUR & COACH SPORTIF", desc: "Coach sportif diplômé et préparateur physique passionné, Léo vous accompagne dans votre transformation avec expertise et bienveillance. Fort de plusieurs années d'expérience en coaching privé à Nice, il propose un suivi personnalisé adapté à vos objectifs.", img: "Leo.jpeg" },
+    { name: "LÉO PAULET-VOLPINI", role: "FONDATEUR & COACH SPORTIF", desc: "Coach sportif diplômé et préparateur physique passionné, Léo vous accompagne dans votre transformation avec expertise et bienveillance. Fort de plusieurs années d'expérience en coaching privé à Nice, il propose un suivi personnalisé adapté à vos objectifs.", img: "/images/Leo.jpeg" },
     { name: "YANN MASSYN", role: "PRÉPARATEUR PHYSIQUE • TRIATHLÈTE", desc: "Vice-Champion du Monde IRONMAN 25-29 ans et triathlète longue distance, Yann met son expertise d'athlète de haut niveau au service de votre progression. Diplômé de l'UFR STAPS Nice, il vous accompagne avec rigueur et passion vers vos objectifs sportifs.", img: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=400&q=80" }
   ];
 
   const services = [
-    { title: "PERSONAL TRAINING", desc: "Séance individuelle de 60 minutes avec votre coach dédié. Programme personnalisé, suivi de progression et conseils nutritionnels pour des résultats optimaux.", img: "room4.jpeg", alt: "Personal training coach sportif Nice" },
+    { title: "PERSONAL TRAINING", desc: "Séance individuelle de 60 minutes avec votre coach dédié. Programme personnalisé, suivi de progression et conseils nutritionnels pour des résultats optimaux.", img: "/images/room4.jpeg", alt: "Personal training coach sportif Nice" },
     { title: "SMALL GROUP", desc: "Entraînement en petit groupe (4 personnes max) combinant renforcement musculaire et cardio. L'énergie du collectif avec l'attention d'un coaching personnalisé.", img: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=600&q=80", alt: "Cours collectif small group training Nice" },
-    { title: "PRÉPARATION PHYSIQUE", desc: "Programme sur mesure pour sportifs amateurs ou confirmés. Optimisez vos performances et prévenez les blessures avec un suivi professionnel.", img: "room3.jpeg", alt: "Préparation physique sportif Nice" }
+    { title: "PRÉPARATION PHYSIQUE", desc: "Programme sur mesure pour sportifs amateurs ou confirmés. Optimisez vos performances et prévenez les blessures avec un suivi professionnel.", img: "/images/room3.jpeg", alt: "Préparation physique sportif Nice" }
   ];
 
   return (
@@ -48,7 +48,7 @@ export default function MPTrainingLanding() {
       {/* Hero Section */}
       <header className="relative min-h-screen flex items-center justify-center pt-16">
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black z-10" />
-        <img src="room1.jpeg" alt="Salle de coaching privé MP Training Nice" className="absolute inset-0 w-full h-full object-cover" />
+        <img src="/images/room1.jpeg" alt="Salle de coaching privé MP Training Nice" className="absolute inset-0 w-full h-full object-cover" />
         <div className="relative z-20 text-center px-4 sm:px-6 max-w-4xl mx-auto py-12">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider mb-4 sm:mb-6">MP TRAINING</h1>
           <p className="text-lg sm:text-xl md:text-2xl font-light tracking-wide mb-4">COACHING SPORTIF PRIVÉ À NICE</p>
