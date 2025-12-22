@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import SchemaOrg from "./schema";
+import { Audiowide } from 'next/font/google';
+
+const audiowide = Audiowide({ 
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-audiowide',
+});
 
 export const metadata: Metadata = {
   title: "MP Training Nice | Coaching Sportif Privé & Personal Training",
@@ -23,7 +30,7 @@ openGraph: {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={audiowide.variable}>
       <SchemaOrg />
       <body>{children}</body>
     </html>

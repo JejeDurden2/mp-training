@@ -22,7 +22,7 @@ export default function MPTrainingLanding() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <a href="#" className="block">
             <img 
-              src="/images/logo.jpeg" 
+              src="/images/logo.png" 
               alt="MP Training Nice - Coaching sportif privé" 
               className="h-8 sm:h-10 w-auto"
             />
