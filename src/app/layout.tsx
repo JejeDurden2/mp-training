@@ -6,7 +6,6 @@ import { Audiowide } from 'next/font/google';
 const audiowide = Audiowide({ 
   weight: '400',
   subsets: ['latin'],
-  variable: '--font-audiowide',
 });
 
 export const metadata: Metadata = {
@@ -30,9 +29,9 @@ openGraph: {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr" className={audiowide.variable}>
+    <html lang="fr">
       <SchemaOrg />
-      <body>{children}</body>
+      <body className={audiowide.className}>{children}</body>
     </html>
   );
 }

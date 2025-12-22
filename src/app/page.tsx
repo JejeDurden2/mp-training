@@ -190,7 +190,7 @@ export default function MPTrainingLanding() {
       {/* Footer */}
       <footer className="py-6 sm:py-8 px-4 sm:px-6 bg-black border-t border-white/10">
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-gray-500">
-          <p className="text-center sm:text-left">© 2024 MP Training Nice - Coach sportif privé</p>
+          <p className="text-center sm:text-left">© 2026 MP Training Nice - Coach sportif privé</p>
           <div className="flex gap-4 sm:gap-6">
             <a href="#" className="hover:text-white transition">Mentions légales</a>
             <a href="#" className="hover:text-white transition">Confidentialité</a>
