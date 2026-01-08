@@ -7,7 +7,7 @@ const Card = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("overflow-hidden", className)}
+    className={cn("overflow-hidden text-center", className)}
     {...props}
   />
 ));

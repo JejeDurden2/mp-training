@@ -19,22 +19,20 @@ const NeonIcon = React.forwardRef<HTMLDivElement, NeonIconProps>(
 );
 NeonIcon.displayName = "NeonIcon";
 
-interface NeonSvgProps extends React.SVGProps<SVGSVGElement> {}
+interface NeonSvgProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-const NeonSvg = React.forwardRef<SVGSVGElement, NeonSvgProps>(
+const NeonSvg = React.forwardRef<HTMLDivElement, NeonSvgProps>(
   ({ className, children, ...props }, ref) => (
-    <svg
+    <div
       ref={ref}
       className={cn(
-        "w-6 h-6 stroke-brand-accent [filter:drop-shadow(0_0_4px_var(--color-brand-accent))]",
+        "[&_svg]:w-6 [&_svg]:h-6 [&_svg]:stroke-brand-accent [&_svg]:filter [&_svg]:[filter:drop-shadow(0_0_4px_var(--color-brand-accent))]",
         className
       )}
-      fill="none"
-      viewBox="0 0 24 24"
       {...props}
     >
       {children}
-    </svg>
+    </div>
   )
 );
 NeonSvg.displayName = "NeonSvg";
