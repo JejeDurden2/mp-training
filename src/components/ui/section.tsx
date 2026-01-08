@@ -27,7 +27,7 @@ const SectionHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-center mb-16", className)}
+    className={cn("w-full flex flex-col items-center text-center mb-16", className)}
     {...props}
   />
 ));
