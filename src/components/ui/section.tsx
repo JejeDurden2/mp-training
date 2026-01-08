@@ -10,7 +10,7 @@ const Section = React.forwardRef<HTMLElement, SectionProps>(
     <section
       ref={ref}
       className={cn(
-        "py-24 px-4 sm:px-6",
+        "py-24 px-4 sm:px-6 flex flex-col items-center",
         variant === "black" && "bg-black",
         variant === "dark" && "bg-brand-dark",
         className
