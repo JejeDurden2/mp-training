@@ -10,6 +10,7 @@ const coaches = [
     role: "COACH SPORTIF • BASKETTEUR",
     desc: "Coach sportif diplômé de l'UFR STAPS Nice et préparateur physique passionné, Léo vous accompagne dans votre transformation avec expertise et bienveillance. Fort de plusieurs années d'expérience en coaching privé à Nice, il propose un suivi personnalisé adapté à vos objectifs.",
     img: "/images/Leo.jpeg",
+    alt: "Léo Paulet-Volpini - Coach sportif diplômé STAPS à Nice spécialisé personal training",
     position: "center 10%"
   },
   {
@@ -17,6 +18,7 @@ const coaches = [
     role: "COACH SPORTIF • TRIATHLÈTE",
     desc: "Vice-Champion du Monde IRONMAN 25-29 ans et triathlète longue distance, Yann met son expertise d'athlète de haut niveau au service de votre progression. Diplômé de l'UFR STAPS Nice, il vous accompagne avec rigueur et passion vers vos objectifs sportifs.",
     img: "/images/Yann.jpeg",
+    alt: "Yann Massyn - Vice-Champion du Monde IRONMAN et coach sportif diplômé STAPS Nice",
     position: "center center"
   }
 ];
@@ -26,19 +28,19 @@ const services = [
     title: "PERSONAL TRAINING",
     desc: "Séance individuelle de 60 minutes avec votre coach dédié. Programme personnalisé, suivi de progression et conseils nutritionnels pour des résultats optimaux.",
     img: "/images/room4.jpeg",
-    alt: "Personal training coach sportif Nice"
+    alt: "Séance de personal training individuelle avec coach sportif diplômé à Nice - MP Training"
   },
   {
     title: "SMALL GROUP",
     desc: "Entraînement en petit groupe (4 personnes max) combinant renforcement musculaire et cardio. L'énergie du collectif avec l'attention d'un coaching personnalisé.",
     img: "/images/room5.jpeg",
-    alt: "Cours collectif small group training Nice"
+    alt: "Cours small group training à Nice - Entraînement collectif 4 personnes max chez MP Training"
   },
   {
     title: "PRÉPARATION PHYSIQUE",
     desc: "Programme sur mesure pour sportifs amateurs ou confirmés. Optimisez vos performances et prévenez les blessures avec un suivi professionnel.",
     img: "/images/room3.jpeg",
-    alt: "Préparation physique sportif Nice"
+    alt: "Programme de préparation physique sportive à Nice - Optimisation performance chez MP Training"
   }
 ];
 
@@ -65,21 +67,21 @@ export default function MPTrainingLanding() {
     <div className="min-h-screen font-inter overflow-x-hidden bg-black text-white">
       
       {/* ==================== NAVIGATION ==================== */}
-      <nav className="nav">
+      <nav className="nav" role="navigation" aria-label="Navigation principale">
         <div className="nav-container">
-          <a href="#">
-            <img src="/images/logo.svg" alt="MP Training Nice" className="h-10 block" />
+          <a href="#" aria-label="MP Training Nice - Retour à l'accueil">
+            <img src="/images/logo.svg" alt="MP Training Nice - Coaching Sportif Privé" className="h-10 block" />
           </a>
           
-          <div className="nav-menu hidden lg:flex">
-            <a href="#studio" className="nav-link">LE STUDIO</a>
-            <a href="#services" className="nav-link">SERVICES</a>
-            <a href="#coachs" className="nav-link">COACHS</a>
-            <a href="#contact" className="nav-link">CONTACT</a>
-            <a href="tel:0627683343" className="btn btn-sm">APPELER</a>
+          <div className="nav-menu hidden lg:flex" role="menubar">
+            <a href="#studio" className="nav-link" role="menuitem">LE STUDIO</a>
+            <a href="#services" className="nav-link" role="menuitem">SERVICES</a>
+            <a href="#coachs" className="nav-link" role="menuitem">COACHS</a>
+            <a href="#contact" className="nav-link" role="menuitem">CONTACT</a>
+            <a href="tel:0627683343" className="btn btn-sm" aria-label="Appeler MP Training Nice">APPELER</a>
           </div>
 
-          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2" aria-label="Menu">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden p-2" aria-label="Ouvrir le menu de navigation" aria-expanded={menuOpen}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {menuOpen ? icons.close : icons.menu}
             </svg>
@@ -87,13 +89,13 @@ export default function MPTrainingLanding() {
         </div>
 
         {menuOpen && (
-          <div className="lg:hidden p-4 bg-black border-t border-white/10 font-title text-sm tracking-widest">
+          <div className="lg:hidden p-4 bg-black border-t border-white/10 font-title text-sm tracking-widest" role="menu" aria-label="Menu mobile">
             {['studio', 'services', 'coachs', 'contact'].map(id => (
-              <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)} className="block py-2 nav-link">
+              <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)} className="block py-2 nav-link" role="menuitem">
                 {id.toUpperCase()}
               </a>
             ))}
-            <a href="tel:0627683343" className="btn btn-sm block text-center mt-4">APPELER</a>
+            <a href="tel:0627683343" className="btn btn-sm block text-center mt-4" aria-label="Appeler MP Training Nice">APPELER</a>
           </div>
         )}
       </nav>
@@ -101,17 +103,17 @@ export default function MPTrainingLanding() {
       {/* ==================== HERO ==================== */}
       <header className="hero">
         <div className="hero-overlay" />
-        <img src="/images/room1.jpeg" alt="Salle MP Training Nice" className="hero-bg" />
+        <img src="/images/room1.jpeg" alt="Studio de coaching sportif privé MP Training à Nice - Salle équipée pour personal training" className="hero-bg" />
         
         <div className="hero-content">
           <h1 className="sr-only">MP Training - Coaching Sportif Privé à Nice</h1>
-          <img src="/images/logo.svg" alt="MP Training" className="hero-logo" />
-          <p className="font-title text-2xl mb-4">COACHING SPORTIF PRIVÉ À NICE</p>
+          <img src="/images/logo.svg" alt="Logo MP Training Nice - Coaching sportif privé" className="hero-logo" />
+          <p className="font-title text-2xl mb-4" role="doc-subtitle">COACHING SPORTIF PRIVÉ À NICE</p>
           <div className="neon-line-hero" />
           <p className="font-body text-lg max-w-2xl mx-auto">
             Votre studio de personal training au cœur de Nice. Atteignez vos objectifs avec un accompagnement 100% personnalisé.
           </p>
-          <a href="tel:0627683343" className="btn mt-10 inline-block">RÉSERVER MA SÉANCE</a>
+          <a href="tel:0627683343" className="btn mt-10 inline-block" aria-label="Réserver une séance de coaching sportif - Appeler MP Training Nice">RÉSERVER MA SÉANCE</a>
         </div>
 
         <div className="hero-arrow animate-bounce hidden sm:block">
@@ -129,10 +131,10 @@ export default function MPTrainingLanding() {
             <div className="font-body">
               <p className="mb-6">Bienvenue chez MP Training, votre espace dédié au coaching sportif personnalisé à Nice. Dans un cadre intimiste et professionnel, nos coachs diplômés vous accompagnent vers l'atteinte de vos objectifs.</p>
               <p className="mb-6">Que vous souhaitiez perdre du poids, gagner en masse musculaire, améliorer votre condition physique ou préparer une compétition, nous construisons ensemble un programme sur mesure.</p>
-              <p>Situés au 20 Rue Théodore de Banville dans le quartier des Musiciens, nous vous accueillons du lundi au samedi pour des séances individuelles ou en petit groupe.</p>
+              <p>Situés au 20 Rue Théodore de Banville dans le quartier Libération, nous vous accueillons du lundi au samedi pour des séances individuelles ou en petit groupe.</p>
             </div>
             <div className="relative">
-              <img src="/images/room2.jpeg" alt="Personal training Nice" className="w-full h-96 object-cover block" />
+              <img src="/images/room2.jpeg" alt="Salle de musculation privée MP Training Nice - Équipement professionnel pour coaching personnalisé" className="w-full h-96 object-cover block" />
             </div>
           </div>
         </div>
@@ -168,9 +170,9 @@ export default function MPTrainingLanding() {
             {coaches.map((coach, i) => (
               <article key={i} className="flex-center">
                 <div className="avatar">
-                  <img 
-                    src={coach.img} 
-                    alt={`${coach.name} - Coach Nice`}
+                  <img
+                    src={coach.img}
+                    alt={coach.alt}
                     style={{ objectPosition: coach.position }}
                   />
                 </div>
@@ -228,8 +230,8 @@ export default function MPTrainingLanding() {
 
           {/* CTA */}
           <div className="flex-center gap-6">
-            <a href="tel:0627683343" className="btn">APPELEZ-NOUS</a>
-            <a href="https://www.instagram.com/mptraining_nice/" aria-label="Instagram" className="social-icon">
+            <a href="tel:0627683343" className="btn" aria-label="Appeler MP Training Nice - 06 27 68 33 43">APPELEZ-NOUS</a>
+            <a href="https://www.instagram.com/mptraining_nice/" aria-label="Suivez MP Training Nice sur Instagram" rel="noopener noreferrer" target="_blank" className="social-icon">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">{icons.instagram}</svg>
             </a>
           </div>
@@ -237,13 +239,15 @@ export default function MPTrainingLanding() {
       </section>
 
       {/* ==================== FOOTER ==================== */}
-      <footer className="footer">
+      <footer className="footer" role="contentinfo">
         <div className="footer-content">
-          <p>© 2026 MP Training Nice - Coach sportif privé</p>
-          <div className="flex gap-6">
-            <a href="#">Mentions légales</a>
-            <a href="#">Confidentialité</a>
-          </div>
+          <p>© 2026 MP Training Nice - Studio de coaching sportif privé à Nice</p>
+          <nav aria-label="Liens légaux">
+            <div className="flex gap-6">
+              <a href="#" rel="nofollow">Mentions légales</a>
+              <a href="#" rel="nofollow">Politique de confidentialité</a>
+            </div>
+          </nav>
         </div>
       </footer>
     </div>
