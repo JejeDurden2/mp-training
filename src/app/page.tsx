@@ -3,48 +3,6 @@
 import { useState } from "react";
 import { MapPin, Phone, Clock, Instagram } from "lucide-react";
 
-import {
-  ButtonLink,
-  Card,
-  CardImage,
-  CardTitle,
-  CardDescription,
-  Avatar,
-  AvatarImage,
-  AvatarBorder,
-  Section,
-  SectionHeader,
-  SectionTitle,
-  NeonLine,
-  Container,
-  Navbar,
-  NavbarContainer,
-  NavbarBrand,
-  NavbarMenu,
-  NavbarLink,
-  NavbarToggle,
-  NavbarMobileMenu,
-  NavbarMobileLink,
-  Hero,
-  HeroBackground,
-  HeroOverlay,
-  HeroContent,
-  HeroTitle,
-  HeroSubtitle,
-  HeroDescription,
-  HeroLogo,
-  HeroScrollIndicator,
-  NeonIcon,
-  NeonSvg,
-  NeonArrow,
-  Footer,
-  FooterContent,
-  FooterNav,
-  FooterLink,
-  SocialIcon,
-  MapContainer,
-} from "@/components/ui";
-
 // ============================================
 // DATA
 // ============================================
@@ -124,102 +82,128 @@ export default function MPTrainingLanding() {
   return (
     <div className="min-h-screen font-inter overflow-x-hidden bg-black text-white">
       {/* ==================== NAVIGATION ==================== */}
-      <Navbar>
-        <NavbarContainer>
-          <NavbarBrand href="#">
+      <nav className="nav">
+        <div className="nav-container">
+          <a href="#" className="nav-link">
             <img
               src="/images/logo.svg"
               alt="MP Training Nice - Coaching Sportif Privé"
               className="h-10 block"
             />
-          </NavbarBrand>
+          </a>
 
-          <NavbarMenu>
+          <div className="nav-menu hidden md:flex">
             {navLinks.map((link) => (
-              <NavbarLink key={link.href} href={link.href}>
+              <a key={link.href} href={link.href} className="nav-link">
                 {link.label}
-              </NavbarLink>
+              </a>
             ))}
-            <ButtonLink
+            <a
               href="tel:0627683343"
-              size="sm"
+              className="btn btn-sm"
               aria-label="Appeler MP Training Nice"
             >
               APPELER
-            </ButtonLink>
-          </NavbarMenu>
+            </a>
+          </div>
 
-          <NavbarToggle
-            isOpen={menuOpen}
+          <button
+            className="md:hidden text-white p-2"
             onClick={() => setMenuOpen(!menuOpen)}
-          />
-        </NavbarContainer>
-
-        <NavbarMobileMenu isOpen={menuOpen}>
-          {navLinks.map((link) => (
-            <NavbarMobileLink
-              key={link.href}
-              href={link.href}
-              onClick={() => setMenuOpen(false)}
-            >
-              {link.label}
-            </NavbarMobileLink>
-          ))}
-          <ButtonLink
-            href="tel:0627683343"
-            size="sm"
-            className="block text-center mt-4"
-            aria-label="Appeler MP Training Nice"
+            aria-label="Menu"
           >
-            APPELER
-          </ButtonLink>
-        </NavbarMobileMenu>
-      </Navbar>
+            {menuOpen ? (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+
+        {menuOpen && (
+          <div className="md:hidden bg-black/95 border-t border-brand-gray-dark/30 px-4 py-6">
+            <div className="flex flex-col gap-4 font-audiowide text-sm tracking-widest">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="nav-link py-2"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </a>
+              ))}
+              <a
+                href="tel:0627683343"
+                className="btn btn-sm text-center mt-4"
+                aria-label="Appeler MP Training Nice"
+              >
+                APPELER
+              </a>
+            </div>
+          </div>
+        )}
+      </nav>
 
       {/* ==================== HERO ==================== */}
-      <Hero>
-        <HeroOverlay />
-        <HeroBackground
+      <header className="hero">
+        <div className="hero-overlay" />
+        <img
           src="/images/room1.jpeg"
           alt="Studio de coaching sportif privé MP Training à Nice - Salle équipée pour personal training"
+          className="hero-bg"
         />
 
-        <HeroContent>
-          <HeroTitle>MP Training - Coaching Sportif Privé à Nice</HeroTitle>
-          <HeroLogo
+        <div className="hero-content">
+          <h1 className="sr-only">MP Training - Coaching Sportif Privé à Nice</h1>
+          <img
             src="/images/logo.svg"
             alt="Logo MP Training Nice - Coaching sportif privé"
+            className="hero-logo"
           />
-          <HeroSubtitle>COACHING SPORTIF PRIVÉ À NICE</HeroSubtitle>
-          <NeonLine className="w-24 my-8" />
-          <HeroDescription>
+          <p className="font-audiowide text-2xl tracking-wider text-white mb-4">
+            COACHING SPORTIF PRIVÉ À NICE
+          </p>
+          <div className="neon-line-hero" />
+          <p className="font-inter font-light text-lg text-brand-gray-light max-w-2xl mx-auto">
             Votre studio de personal training au cœur de Nice. Atteignez vos
             objectifs avec un accompagnement 100% personnalisé.
-          </HeroDescription>
-          <ButtonLink
+          </p>
+          <a
             href="tel:0627683343"
-            className="mt-10"
+            className="btn mt-10 inline-block"
             aria-label="Réserver une séance de coaching sportif - Appeler MP Training Nice"
           >
             RÉSERVER MA SÉANCE
-          </ButtonLink>
-        </HeroContent>
+          </a>
+        </div>
 
-        <HeroScrollIndicator>
-          <NeonArrow />
-        </HeroScrollIndicator>
-      </Hero>
+        <div className="hero-arrow">
+          <svg className="neon-arrow animate-bounce" fill="none" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </div>
+      </header>
 
       {/* ==================== STUDIO ==================== */}
-      <Section id="studio" variant="black">
-        <Container>
-          <SectionHeader>
-            <SectionTitle>VOTRE STUDIO DE COACHING PRIVÉ À NICE</SectionTitle>
-            <NeonLine />
-          </SectionHeader>
+      <section id="studio" className="section py-24 px-4 sm:py-24 sm:px-6 bg-black">
+        <div className="container">
+          <div className="flex-center">
+            <h2 className="section-title">VOTRE STUDIO DE COACHING PRIVÉ À NICE</h2>
+            <div className="neon-line" />
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 font-light text-brand-gray-light leading-relaxed">
+          <div className="grid-2">
+            <div className="space-y-6 font-body">
               <p>
                 Bienvenue chez MP Training, votre espace dédié au coaching
                 sportif personnalisé à Nice. Dans un cadre intimiste et
@@ -245,106 +229,98 @@ export default function MPTrainingLanding() {
               />
             </div>
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
       {/* ==================== SERVICES ==================== */}
-      <Section id="services" variant="dark">
-        <Container>
-          <SectionHeader>
-            <SectionTitle>NOS PRESTATIONS DE COACHING</SectionTitle>
-            <NeonLine />
-          </SectionHeader>
+      <section id="services" className="section py-24 px-4 sm:py-24 sm:px-6 bg-brand-dark">
+        <div className="container">
+          <div className="flex-center">
+            <h2 className="section-title">NOS PRESTATIONS DE COACHING</h2>
+            <div className="neon-line" />
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid-auto">
             {services.map((service, i) => (
-              <Card key={i}>
-                <CardImage className="mb-6">
+              <article key={i} className="text-center">
+                <div className="card-image">
                   <img
                     src={service.img}
                     alt={service.alt}
-                    className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                </CardImage>
-                <CardTitle className="mb-3">{service.title}</CardTitle>
-                <CardDescription>{service.desc}</CardDescription>
-              </Card>
+                </div>
+                <h3 className="font-title text-xl mb-3">{service.title}</h3>
+                <p className="font-body text-sm">{service.desc}</p>
+              </article>
             ))}
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
       {/* ==================== COACHES ==================== */}
-      <Section id="coachs" variant="black">
-        <Container className="max-w-5xl">
-          <SectionHeader>
-            <SectionTitle>VOS COACHS SPORTIFS À NICE</SectionTitle>
-            <NeonLine variant="white" />
-          </SectionHeader>
+      <section id="coachs" className="section py-24 px-4 sm:py-24 sm:px-6 bg-black">
+        <div className="container-sm">
+          <div className="flex-center">
+            <h2 className="section-title">VOS COACHS SPORTIFS À NICE</h2>
+            <div className="neon-line-white" />
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid-2">
             {coaches.map((coach, i) => (
-              <article key={i} className="flex flex-col items-center text-center">
-                <Avatar className="mb-6">
-                  <AvatarImage
+              <article key={i} className="flex-center text-center">
+                <div className="avatar">
+                  <img
                     src={coach.img}
                     alt={coach.alt}
                     style={{ objectPosition: coach.position }}
                   />
-                  <AvatarBorder />
-                </Avatar>
-                <CardTitle className="mb-2">{coach.name}</CardTitle>
-                <p className="text-brand-gray-dark text-xs tracking-widest mb-4">
+                </div>
+                <h3 className="font-title text-xl mb-2">{coach.name}</h3>
+                <p className="text-muted text-xs tracking-widest mb-4">
                   {coach.role}
                 </p>
-                <CardDescription className="text-center">
-                  {coach.desc}
-                </CardDescription>
+                <p className="font-body text-sm">{coach.desc}</p>
               </article>
             ))}
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
       {/* ==================== CONTACT ==================== */}
-      <Section id="contact" variant="dark">
-        <Container>
-          <SectionHeader>
-            <SectionTitle>CONTACTEZ-NOUS</SectionTitle>
-            <NeonLine variant="white" />
-          </SectionHeader>
+      <section id="contact" className="section py-24 px-4 sm:py-24 sm:px-6 bg-brand-dark">
+        <div className="container">
+          <div className="flex-center">
+            <h2 className="section-title">CONTACTEZ-NOUS</h2>
+            <div className="neon-line-white" />
+          </div>
 
           {/* Contact Info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+          <div className="grid-auto mb-16">
             {contactInfo.map((item, i) => {
               const IconComponent = item.icon;
               return (
-                <div key={i} className="flex flex-col items-center text-center">
-                  <NeonIcon>
-                    <NeonSvg>
-                      <IconComponent className="w-6 h-6" />
-                    </NeonSvg>
-                  </NeonIcon>
-                  <p className="font-audiowide text-sm mb-2 text-white">
-                    {item.label}
-                  </p>
+                <div key={i} className="flex-center text-center">
+                  <div className="neon-icon">
+                    <IconComponent className="neon-svg" />
+                  </div>
+                  <p className="font-title text-sm mb-2">{item.label}</p>
                   {item.lines.map((line, j) =>
                     item.href && j === 0 ? (
                       <a
                         key={j}
                         href={item.href}
-                        className="text-sm font-light text-brand-gray-light hover:opacity-70 transition-opacity"
+                        className="font-body text-sm hover:opacity-70 transition-opacity"
                       >
                         {line}
                       </a>
                     ) : (
-                      <p key={j} className="text-sm font-light text-brand-gray-light">
+                      <p key={j} className="font-body text-sm">
                         {line}
                       </p>
                     )
                   )}
                   {item.muted?.map((line, j) => (
-                    <p key={`muted-${j}`} className="text-sm text-brand-gray-dark">
+                    <p key={`muted-${j}`} className="text-muted text-sm">
                       {line}
                     </p>
                   ))}
@@ -354,7 +330,7 @@ export default function MPTrainingLanding() {
           </div>
 
           {/* Map */}
-          <MapContainer className="mb-12">
+          <div className="map-container mb-12">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5!2d7.2615!3d43.7055!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cdd0f5e9c1f9a1%3A0x0!2s20%20Rue%20Th%C3%A9odore%20de%20Banville%2C%2006100%20Nice!5e0!3m2!1sfr!2sfr"
               allowFullScreen
@@ -362,36 +338,40 @@ export default function MPTrainingLanding() {
               referrerPolicy="no-referrer-when-downgrade"
               title="MP Training Nice"
             />
-          </MapContainer>
+          </div>
 
           {/* CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <ButtonLink
+            <a
               href="tel:0627683343"
+              className="btn"
               aria-label="Appeler MP Training Nice - 06 27 68 33 43"
             >
               APPELEZ-NOUS
-            </ButtonLink>
-            <SocialIcon
+            </a>
+            <a
               href="https://www.instagram.com/mptraining_nice/"
+              className="social-icon"
               aria-label="Suivez MP Training Nice sur Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <Instagram className="w-4 h-4" />
-            </SocialIcon>
+            </a>
           </div>
-        </Container>
-      </Section>
+        </div>
+      </section>
 
       {/* ==================== FOOTER ==================== */}
-      <Footer>
-        <FooterContent>
+      <footer className="footer">
+        <div className="footer-content">
           <p>© 2026 MP Training Nice - Studio de coaching sportif privé à Nice</p>
-          <FooterNav>
-            <FooterLink href="#">Mentions légales</FooterLink>
-            <FooterLink href="#">Politique de confidentialité</FooterLink>
-          </FooterNav>
-        </FooterContent>
-      </Footer>
+          <nav className="flex gap-6">
+            <a href="#" rel="nofollow">Mentions légales</a>
+            <a href="#" rel="nofollow">Politique de confidentialité</a>
+          </nav>
+        </div>
+      </footer>
     </div>
   );
 }
