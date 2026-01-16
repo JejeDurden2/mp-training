@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="border-t border-mp-white/10 bg-mp-black">
       <div className="container-custom py-12">
-        <div className="grid gap-10 md:gap-8 md:grid-cols-3">
+        <div className="grid gap-10 pt-8 md:gap-8 md:pt-0 md:grid-cols-3">
           {/* Logo & Description */}
           <div>
             <Image
