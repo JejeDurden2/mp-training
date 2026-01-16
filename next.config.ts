@@ -2,11 +2,9 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-
-  // Uncomment if using images from external domains
-  // images: {
-  //   domains: ['example.com'],
-  // },
+  images: {
+    qualities: [75, 85],
+  },
 };
 
 export default nextConfig;
