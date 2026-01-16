@@ -30,11 +30,8 @@ export function Studio() {
         </div>
 
         {/* Secondary Images */}
-        {otherImages.slice(0, 2).map((image, index) => (
-          <div
-            key={index}
-            className="relative aspect-[4/3] overflow-hidden rounded-2xl"
-          >
+        {otherImages.slice(0, 2).map((image) => (
+          <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
             <Image
               src={image.src}
               alt={image.alt}
@@ -49,9 +46,9 @@ export function Studio() {
 
       {/* Features Grid */}
       <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {studioFeatures.map((feature, index) => (
+        {studioFeatures.map((feature) => (
           <div
-            key={index}
+            key={feature.title}
             className="glass-card rounded-xl p-6 text-center transition-all hover:scale-[1.02]"
           >
             <div className="mb-4 flex justify-center">
@@ -60,9 +57,7 @@ export function Studio() {
             <h3 className="mb-2 font-heading text-lg uppercase tracking-wider text-mp-white">
               {feature.title}
             </h3>
-            <p className="font-body text-sm text-mp-white/60">
-              {feature.description}
-            </p>
+            <p className="font-body text-sm text-mp-white/60">{feature.description}</p>
           </div>
         ))}
       </div>

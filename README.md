@@ -277,18 +277,21 @@ vercel env add NEXT_PUBLIC_APP_NAME production
 ## ⚡ Performance Tips
 
 1. **Images**: Use Next.js `<Image>` component
+
    ```tsx
    import Image from 'next/image';
-   <Image src="/hero.jpg" alt="Hero" width={1200} height={600} priority />
+   <Image src="/hero.jpg" alt="Hero" width={1200} height={600} priority />;
    ```
 
 2. **Fonts**: Use `next/font` for optimal loading
+
    ```tsx
    import { Inter } from 'next/font/google';
    const inter = Inter({ subsets: ['latin'] });
    ```
 
 3. **Dynamic Imports**: Lazy load heavy components
+
    ```tsx
    const HeavyComponent = dynamic(() => import('./HeavyComponent'), {
      loading: () => <p>Loading...</p>,
@@ -342,6 +345,7 @@ claude
 ```
 
 **Example prompts:**
+
 - "Add a hero section with CTA buttons"
 - "Create a features section with cards"
 - "Add a contact form with validation"
@@ -389,6 +393,7 @@ MIT - Feel free to use this boilerplate for any project
 ## 🙏 Credits
 
 Built with best practices from:
+
 - Next.js documentation
 - Vercel performance guidelines
 - React best practices

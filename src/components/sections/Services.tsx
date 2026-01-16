@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Section, SectionHeader } from '@/components/ui/Section';
 import { NeonIcon } from '@/components/ui/NeonIcon';
 import { Button } from '@/components/ui/Button';
+import { cn } from '@/lib/utils';
 import { services } from '@/lib/data';
 
 export function Services() {
@@ -18,9 +19,10 @@ export function Services() {
         {services.map((service) => (
           <article
             key={service.id}
-            className={`group glass-card relative overflow-hidden rounded-2xl transition-all hover:scale-[1.02] ${
-              service.featured ? 'ring-2 ring-mp-neon/50' : ''
-            }`}
+            className={cn(
+              'group glass-card relative overflow-hidden rounded-2xl transition-all hover:scale-[1.02]',
+              service.featured && 'ring-2 ring-mp-neon/50',
+            )}
           >
             {/* Featured Badge */}
             {service.featured && (
@@ -54,20 +56,16 @@ export function Services() {
                 <h3 className="font-heading text-xl uppercase tracking-wider text-mp-white">
                   {service.name}
                 </h3>
-                <span className="font-body text-sm text-mp-neon">
-                  {service.duration}
-                </span>
+                <span className="font-body text-sm text-mp-neon">{service.duration}</span>
               </div>
 
-              <p className="mb-4 font-body text-sm text-mp-white/70">
-                {service.description}
-              </p>
+              <p className="mb-4 font-body text-sm text-mp-white/70">{service.description}</p>
 
               {/* Features List */}
               <ul className="mb-6 space-y-2">
-                {service.features.slice(0, 4).map((feature, index) => (
+                {service.features.slice(0, 4).map((feature) => (
                   <li
-                    key={index}
+                    key={feature}
                     className="flex items-center gap-2 font-body text-sm text-mp-white/60"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-mp-neon" />

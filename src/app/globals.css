@@ -60,23 +60,31 @@ body {
    ============================================ */
 
 .neon-glow {
-  text-shadow: 0 0 10px rgba(0, 128, 255, 0.8), 0 0 20px rgba(0, 128, 255, 0.6),
+  text-shadow:
+    0 0 10px rgba(0, 128, 255, 0.8),
+    0 0 20px rgba(0, 128, 255, 0.6),
     0 0 30px rgba(0, 128, 255, 0.4);
 }
 
 .neon-border {
   border: 2px solid #0080ff;
-  box-shadow: 0 0 10px rgba(0, 128, 255, 0.5), inset 0 0 10px rgba(0, 128, 255, 0.2);
+  box-shadow:
+    0 0 10px rgba(0, 128, 255, 0.5),
+    inset 0 0 10px rgba(0, 128, 255, 0.2);
 }
 
 .neon-button {
   background: linear-gradient(135deg, #0080ff, #0066cc);
-  box-shadow: 0 0 20px rgba(0, 128, 255, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+  box-shadow:
+    0 0 20px rgba(0, 128, 255, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
 
 .neon-button:hover {
-  box-shadow: 0 0 30px rgba(0, 128, 255, 0.8), 0 6px 16px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 0 30px rgba(0, 128, 255, 0.8),
+    0 6px 16px rgba(0, 0, 0, 0.5);
   transform: translateY(-2px);
 }
 
@@ -192,7 +200,9 @@ body {
 
 /* Image Hover Effects */
 .image-hover-zoom {
-  transition: transform 0.5s ease, filter 0.5s ease;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
 }
 
 .image-hover-zoom:hover {

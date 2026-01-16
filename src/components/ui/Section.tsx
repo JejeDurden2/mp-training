@@ -16,15 +16,8 @@ export function Section({
   noPadding = false,
 }: SectionProps) {
   return (
-    <section
-      id={id}
-      className={cn('relative', !noPadding && 'section-spacing', className)}
-    >
-      {fullWidth ? (
-        children
-      ) : (
-        <div className="container-custom">{children}</div>
-      )}
+    <section id={id} className={cn('relative', !noPadding && 'section-spacing', className)}>
+      {fullWidth ? children : <div className="container-custom">{children}</div>}
     </section>
   );
 }
@@ -45,21 +38,13 @@ export function SectionHeader({
   className,
 }: SectionHeaderProps) {
   return (
-    <div
-      className={cn(
-        'mb-12 md:mb-16',
-        centered && 'text-center',
-        className,
-      )}
-    >
+    <div className={cn('mb-12 md:mb-16', centered && 'text-center', className)}>
       {eyebrow && (
         <span className="mb-4 block font-body text-sm uppercase tracking-widest text-mp-neon">
           {eyebrow}
         </span>
       )}
-      <h2 className="font-heading text-h2-mobile md:text-h2 uppercase text-mp-white">
-        {title}
-      </h2>
+      <h2 className="font-heading text-h2-mobile md:text-h2 uppercase text-mp-white">{title}</h2>
       <div className="mx-auto mt-4 w-24 neon-line" />
       {description && (
         <p className="mx-auto mt-6 max-w-2xl font-body text-base md:text-body-lg text-mp-white/70">

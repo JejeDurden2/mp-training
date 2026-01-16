@@ -1,5 +1,3 @@
-'use client';
-
 import { forwardRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -16,12 +14,10 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       'inline-flex items-center justify-center font-heading uppercase tracking-wider transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-mp-neon focus-visible:ring-offset-2 focus-visible:ring-offset-mp-black disabled:opacity-50 disabled:pointer-events-none';
 
     const variants = {
-      primary:
-        'neon-button text-mp-white rounded-full hover:shadow-neon-lg active:scale-[0.98]',
+      primary: 'neon-button text-mp-white rounded-full hover:shadow-neon-lg active:scale-[0.98]',
       secondary:
         'bg-transparent border-2 border-mp-neon text-mp-white rounded-full hover:bg-mp-neon/10 hover:shadow-neon active:scale-[0.98]',
-      ghost:
-        'bg-transparent text-mp-white hover:text-mp-neon underline-offset-4 hover:underline',
+      ghost: 'bg-transparent text-mp-white hover:text-mp-neon underline-offset-4 hover:underline',
     };
 
     const sizes = {
@@ -32,10 +28,7 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
     if (href) {
       return (
-        <a
-          href={href}
-          className={cn(baseStyles, variants[variant], sizes[size], className)}
-        >
+        <a href={href} className={cn(baseStyles, variants[variant], sizes[size], className)}>
           {children}
         </a>
       );

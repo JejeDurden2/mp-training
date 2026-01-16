@@ -14,10 +14,7 @@ export function Coaches() {
       {/* Coaches Grid */}
       <div className="grid gap-8 md:grid-cols-2">
         {coaches.map((coach) => (
-          <article
-            key={coach.id}
-            className="group relative overflow-hidden rounded-2xl"
-          >
+          <article key={coach.id} className="group relative overflow-hidden rounded-2xl">
             {/* Image Container */}
             <div className="relative aspect-[3/4] md:aspect-[4/5]">
               <Image
@@ -46,15 +43,13 @@ export function Coaches() {
                 </div>
 
                 {/* Bio */}
-                <p className="mb-4 font-body text-sm text-mp-white/70">
-                  {coach.bio}
-                </p>
+                <p className="mb-4 font-body text-sm text-mp-white/70">{coach.bio}</p>
 
                 {/* Specialties */}
                 <div className="flex flex-wrap gap-2">
-                  {coach.specialties.map((specialty, index) => (
+                  {coach.specialties.map((specialty) => (
                     <span
-                      key={index}
+                      key={specialty}
                       className="rounded-full border border-mp-neon/50 px-3 py-1 font-body text-xs text-mp-neon"
                     >
                       {specialty}

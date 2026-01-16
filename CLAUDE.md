@@ -123,6 +123,7 @@ When starting a new project:
 ### 1. Update Metadata
 
 **`src/app/layout.tsx`**:
+
 ```tsx
 export const metadata: Metadata = {
   title: 'Your App Name',
@@ -140,6 +141,7 @@ export const metadata: Metadata = {
 ### 2. Customize Colors
 
 **`tailwind.config.ts`**:
+
 ```ts
 theme: {
   extend: {
@@ -160,6 +162,7 @@ theme: {
 ### 4. Update Robots.txt
 
 **`public/robots.txt`**:
+
 ```
 Sitemap: https://yourapp.com/sitemap.xml
 ```
@@ -240,6 +243,7 @@ vercel
 ### Environment Variables (Vercel)
 
 Set in project settings:
+
 - `NEXT_PUBLIC_APP_URL`
 - `NEXT_PUBLIC_APP_NAME`
 - Add any others from `.env.local.example`

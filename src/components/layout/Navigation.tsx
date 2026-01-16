@@ -33,6 +33,10 @@ export function Navigation() {
     } else {
       document.body.style.overflow = 'unset';
     }
+
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isMobileMenuOpen]);
 
   return (
@@ -98,9 +102,7 @@ export function Navigation() {
       <div
         className={cn(
           'fixed inset-0 z-50 bg-mp-black/95 backdrop-blur-xl transition-all duration-300 md:hidden',
-          isMobileMenuOpen
-            ? 'opacity-100 pointer-events-auto'
-            : 'opacity-0 pointer-events-none',
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none',
         )}
       >
         <div className="container-custom flex h-full flex-col">

@@ -92,9 +92,7 @@ export function Contact() {
                   <p className="mt-1 font-body text-mp-white/70">
                     {businessInfo.hours.weekdays.days}: {businessInfo.hours.weekdays.hours}
                   </p>
-                  <p className="font-body text-sm text-mp-neon">
-                    {businessInfo.hours.note}
-                  </p>
+                  <p className="font-body text-sm text-mp-neon">{businessInfo.hours.note}</p>
                 </div>
               </div>
 

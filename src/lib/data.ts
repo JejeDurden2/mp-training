@@ -6,7 +6,7 @@
 // Business Information
 export const businessInfo = {
   name: 'MP Training Nice',
-  tagline: 'Coaching privé d\'excellence',
+  tagline: "Coaching privé d'excellence",
   phone: '06 27 68 33 43',
   phoneFormatted: '+33627683343',
   email: 'contact@mptraining.fr',
@@ -14,12 +14,12 @@ export const businessInfo = {
     street: '20 Rue Théodore de Banville',
     city: 'Nice',
     postalCode: '06100',
-    region: 'Provence-Alpes-Côte d\'Azur',
+    region: "Provence-Alpes-Côte d'Azur",
     country: 'France',
     neighborhood: 'Libération',
     coordinates: {
       lat: 43.7102,
-      lng: 7.2620,
+      lng: 7.262,
     },
   },
   hours: {
@@ -79,7 +79,7 @@ export const services: Service[] = [
     featured: true,
     seoTitle: 'Personal Training Nice | Coach Diplômé STAPS | MP Training',
     seoDescription:
-      'Séances de personal training à Nice avec coachs diplômés STAPS. Programme 100% personnalisé, suivi nutrition inclus. Réservez votre séance d\'essai gratuite.',
+      "Séances de personal training à Nice avec coachs diplômés STAPS. Programme 100% personnalisé, suivi nutrition inclus. Réservez votre séance d'essai gratuite.",
   },
   {
     id: 'small-groups',
@@ -90,7 +90,7 @@ export const services: Service[] = [
     maxParticipants: 4,
     price: '', // To be filled
     description:
-      'Entraînement en petit groupe (maximum 4 personnes) pour allier l\'énergie collective et l\'attention personnalisée. Parfait pour la motivation et l\'émulation.',
+      "Entraînement en petit groupe (maximum 4 personnes) pour allier l'énergie collective et l'attention personnalisée. Parfait pour la motivation et l'émulation.",
     features: [
       'Maximum 4 personnes',
       'Ambiance conviviale',
@@ -158,9 +158,9 @@ export const coaches: Coach[] = [
     title: 'Coach Expert',
     image: '/images/Leo.jpeg',
     imageFocus: 'center 10%',
-    bio: 'Ancien basketteur professionnel, Léo apporte 8 ans d\'expérience en préparation physique et coaching privé. Sa passion pour le sport et son expertise technique garantissent des résultats concrets.',
+    bio: "Ancien basketteur professionnel, Léo apporte 8 ans d'expérience en préparation physique et coaching privé. Sa passion pour le sport et son expertise technique garantissent des résultats concrets.",
     longBio:
-      'Diplômé de l\'UFR STAPS Nice, Léo a développé une expertise unique combinant sa carrière de basketteur professionnel et sa formation scientifique en sciences du sport. Avec plus de 8 ans d\'expérience en coaching privé, il a accompagné des centaines de clients vers leurs objectifs, qu\'il s\'agisse de perte de poids, de prise de masse musculaire ou de préparation sportive.',
+      "Diplômé de l'UFR STAPS Nice, Léo a développé une expertise unique combinant sa carrière de basketteur professionnel et sa formation scientifique en sciences du sport. Avec plus de 8 ans d'expérience en coaching privé, il a accompagné des centaines de clients vers leurs objectifs, qu'il s'agisse de perte de poids, de prise de masse musculaire ou de préparation sportive.",
     specialties: ['Perte de poids', 'Force athlétique', 'Prise de masse', 'Basketball'],
     certifications: ['Diplômé UFR STAPS Nice', 'BPJEPS AGFF', 'Préparateur physique'],
     philosophy:
@@ -177,9 +177,9 @@ export const coaches: Coach[] = [
     title: 'Vice-Champion du Monde IRONMAN',
     image: '/images/Yann.jpeg',
     imageFocus: 'center center',
-    bio: 'Athlète d\'élite et coach passionné, Yann vous guide vers vos objectifs avec méthode et motivation. Son expérience de haut niveau apporte une dimension unique à chaque séance.',
+    bio: "Athlète d'élite et coach passionné, Yann vous guide vers vos objectifs avec méthode et motivation. Son expérience de haut niveau apporte une dimension unique à chaque séance.",
     longBio:
-      'Vice-Champion du Monde IRONMAN 25-29 ans et diplômé de l\'UFR STAPS Nice, Yann incarne l\'excellence sportive. Son parcours d\'athlète de très haut niveau en triathlon longue distance lui confère une connaissance unique de l\'entraînement, de la nutrition et de la préparation mentale. Il met aujourd\'hui cette expertise au service de tous ceux qui souhaitent se dépasser.',
+      "Vice-Champion du Monde IRONMAN 25-29 ans et diplômé de l'UFR STAPS Nice, Yann incarne l'excellence sportive. Son parcours d'athlète de très haut niveau en triathlon longue distance lui confère une connaissance unique de l'entraînement, de la nutrition et de la préparation mentale. Il met aujourd'hui cette expertise au service de tous ceux qui souhaitent se dépasser.",
     specialties: ['Endurance', 'Performance', 'Triathlon', 'IRONMAN'],
     certifications: ['Diplômé UFR STAPS Nice', 'BPJEPS AGFF', 'Entraîneur IRONMAN'],
     achievements: [
@@ -188,7 +188,7 @@ export const coaches: Coach[] = [
       'Triathlète longue distance',
     ],
     philosophy:
-      'Yann croit en la puissance de la régularité et de la progression constante. Son expérience au plus haut niveau lui a appris que chaque objectif, aussi ambitieux soit-il, est atteignable avec la bonne méthode et le bon état d\'esprit.',
+      "Yann croit en la puissance de la régularité et de la progression constante. Son expérience au plus haut niveau lui a appris que chaque objectif, aussi ambitieux soit-il, est atteignable avec la bonne méthode et le bon état d'esprit.",
     seoTitle: 'Yann Massyn - Vice-Champion IRONMAN & Coach Nice | MP Training',
     seoDescription:
       'Yann Massyn, Vice-Champion du Monde IRONMAN, coach sportif diplômé STAPS Nice. Expert endurance, triathlon, préparation athlétique haute performance.',
@@ -228,7 +228,7 @@ export const studioImages = [
   },
   {
     src: '/images/room2.jpeg',
-    alt: 'Studio de coaching sportif privé moderne à Nice - Vue d\'ensemble',
+    alt: "Studio de coaching sportif privé moderne à Nice - Vue d'ensemble",
     featured: true,
   },
   {
@@ -238,7 +238,7 @@ export const studioImages = [
   },
   {
     src: '/images/room4.jpeg',
-    alt: 'Salle d\'entraînement privée MP Training Nice - Personal training',
+    alt: "Salle d'entraînement privée MP Training Nice - Personal training",
     featured: false,
   },
   {
@@ -256,19 +256,19 @@ export const faqItems = [
       'Nos tarifs varient selon la formule choisie : personal training individuel, small groups (4 personnes max) ou préparation athlétique. Nous proposons également des packages avantageux. Contactez-nous pour un devis personnalisé adapté à vos objectifs.',
   },
   {
-    question: 'Proposez-vous une séance d\'essai gratuite ?',
+    question: "Proposez-vous une séance d'essai gratuite ?",
     answer:
-      'Oui ! Nous offrons une première séance d\'essai gratuite pour découvrir notre studio, rencontrer nos coachs et tester nos programmes. C\'est l\'occasion idéale pour voir si MP Training correspond à vos attentes.',
+      "Oui ! Nous offrons une première séance d'essai gratuite pour découvrir notre studio, rencontrer nos coachs et tester nos programmes. C'est l'occasion idéale pour voir si MP Training correspond à vos attentes.",
   },
   {
     question: 'Faut-il être en forme pour commencer le coaching sportif ?',
     answer:
-      'Absolument pas ! Nos programmes sont adaptés à tous les niveaux, du débutant complet à l\'athlète confirmé. Chaque séance est personnalisée en fonction de votre condition physique actuelle et de vos objectifs.',
+      "Absolument pas ! Nos programmes sont adaptés à tous les niveaux, du débutant complet à l'athlète confirmé. Chaque séance est personnalisée en fonction de votre condition physique actuelle et de vos objectifs.",
   },
   {
     question: 'Quelle est la différence entre personal training et small group ?',
     answer:
-      'Le personal training est une séance 1-on-1 avec un coach dédié, 100% personnalisée. Le small group (maximum 4 personnes) combine l\'énergie du collectif avec un suivi personnalisé, à un tarif plus avantageux.',
+      "Le personal training est une séance 1-on-1 avec un coach dédié, 100% personnalisée. Le small group (maximum 4 personnes) combine l'énergie du collectif avec un suivi personnalisé, à un tarif plus avantageux.",
   },
   {
     question: 'Où se situe MP Training à Nice ?',
@@ -276,7 +276,7 @@ export const faqItems = [
       'Nous sommes situés au 20 Rue Théodore de Banville, dans le quartier Libération, en plein centre de Nice. Facilement accessible en transport en commun et avec parking à proximité.',
   },
   {
-    question: 'Quels sont vos horaires d\'ouverture ?',
+    question: "Quels sont vos horaires d'ouverture ?",
     answer:
       'Nous sommes ouverts du lundi au samedi, de 8h à 21h, sur rendez-vous uniquement. Cette flexibilité nous permet de nous adapter à vos contraintes professionnelles et personnelles.',
   },
@@ -288,7 +288,7 @@ export const faqItems = [
   {
     question: 'Puis-je choisir mon coach ?',
     answer:
-      'Tout à fait ! Léo et Yann ont des spécialités complémentaires (force/musculation pour Léo, endurance/performance pour Yann). Lors de votre séance d\'essai, nous vous orienterons vers le coach le plus adapté à vos objectifs, mais le choix final vous appartient.',
+      "Tout à fait ! Léo et Yann ont des spécialités complémentaires (force/musculation pour Léo, endurance/performance pour Yann). Lors de votre séance d'essai, nous vous orienterons vers le coach le plus adapté à vos objectifs, mais le choix final vous appartient.",
   },
 ];
 
@@ -299,7 +299,7 @@ export const testimonials = [
     name: 'Sophie D.',
     rating: 5,
     date: '2025-12-15',
-    text: 'Après 3 mois de personal training avec Léo, j\'ai perdu 8kg et gagné en confiance. Le studio MP Training à Nice est impeccable, et l\'accompagnement 100% personnalisé.',
+    text: "Après 3 mois de personal training avec Léo, j'ai perdu 8kg et gagné en confiance. Le studio MP Training à Nice est impeccable, et l'accompagnement 100% personnalisé.",
     service: 'Personal Training',
     coach: 'Léo',
   },
@@ -308,7 +308,7 @@ export const testimonials = [
     name: 'Marc L.',
     rating: 5,
     date: '2025-11-20',
-    text: 'Yann m\'a préparé pour mon premier IRONMAN. Grâce à son expertise et sa méthode, j\'ai terminé la course dans un temps bien meilleur que prévu. Un coach exceptionnel !',
+    text: "Yann m'a préparé pour mon premier IRONMAN. Grâce à son expertise et sa méthode, j'ai terminé la course dans un temps bien meilleur que prévu. Un coach exceptionnel !",
     service: 'Préparation Athlétique',
     coach: 'Yann',
   },
@@ -317,7 +317,7 @@ export const testimonials = [
     name: 'Julie M.',
     rating: 5,
     date: '2025-10-10',
-    text: 'Les small groups chez MP Training, c\'est le parfait équilibre : l\'énergie du groupe avec l\'attention d\'un coach. Ambiance top et résultats au rendez-vous !',
+    text: "Les small groups chez MP Training, c'est le parfait équilibre : l'énergie du groupe avec l'attention d'un coach. Ambiance top et résultats au rendez-vous !",
     service: 'Small Groups',
     coach: 'Léo',
   },

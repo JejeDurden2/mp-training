@@ -7,12 +7,7 @@ interface GlassCardProps {
   padding?: 'none' | 'sm' | 'md' | 'lg';
 }
 
-export function GlassCard({
-  children,
-  className,
-  hover = true,
-  padding = 'md',
-}: GlassCardProps) {
+export function GlassCard({ children, className, hover = true, padding = 'md' }: GlassCardProps) {
   const paddingStyles = {
     none: '',
     sm: 'p-4',
