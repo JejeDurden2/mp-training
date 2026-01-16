@@ -64,7 +64,7 @@ export const services: Service[] = [
     slug: 'personal-training-nice',
     icon: 'user',
     duration: '60 minutes',
-    price: '', // To be filled
+    price: '60€',
     description:
       'Coaching 100% personnalisé avec un suivi sur-mesure pour atteindre vos objectifs rapidement. Programme individualisé adapté à votre niveau et vos besoins.',
     features: [
@@ -88,7 +88,7 @@ export const services: Service[] = [
     icon: 'users',
     duration: '60 minutes',
     maxParticipants: 4,
-    price: '', // To be filled
+    price: '35€/pers.',
     description:
       "Entraînement en petit groupe (maximum 4 personnes) pour allier l'énergie collective et l'attention personnalisée. Parfait pour la motivation et l'émulation.",
     features: [
@@ -111,7 +111,7 @@ export const services: Service[] = [
     slug: 'preparation-physique-nice',
     icon: 'activity',
     duration: '60 minutes',
-    price: '', // To be filled
+    price: '60€',
     description:
       'Programme spécifique pour améliorer vos performances sportives et prévenir les blessures. Adapté aux athlètes amateurs et professionnels.',
     features: [
@@ -158,16 +158,16 @@ export const coaches: Coach[] = [
     title: 'Coach Expert',
     image: '/images/Leo.jpeg',
     imageFocus: 'center 10%',
-    bio: "Ancien basketteur professionnel, Léo apporte 8 ans d'expérience en préparation physique et coaching privé. Sa passion pour le sport et son expertise technique garantissent des résultats concrets.",
+    bio: "Basketteur semi-professionnel, Léo apporte 8 ans d'expérience en préparation physique et coaching privé. Sa passion pour le sport et son expertise technique garantissent des résultats concrets.",
     longBio:
-      "Diplômé de l'UFR STAPS Nice, Léo a développé une expertise unique combinant sa carrière de basketteur professionnel et sa formation scientifique en sciences du sport. Avec plus de 8 ans d'expérience en coaching privé, il a accompagné des centaines de clients vers leurs objectifs, qu'il s'agisse de perte de poids, de prise de masse musculaire ou de préparation sportive.",
+      "Diplômé de l'UFR STAPS Nice, Léo a développé une expertise unique combinant sa carrière de basketteur semi-professionnel et sa formation scientifique en sciences du sport. Avec plus de 8 ans d'expérience en coaching privé, il a accompagné des centaines de clients vers leurs objectifs, qu'il s'agisse de perte de poids, de prise de masse musculaire ou de préparation sportive.",
     specialties: ['Perte de poids', 'Force athlétique', 'Prise de masse', 'Basketball'],
     certifications: ['Diplômé UFR STAPS Nice', 'BPJEPS AGFF', 'Préparateur physique'],
     philosophy:
       'Pour Léo, chaque client est unique et mérite un programme sur-mesure. Son approche allie rigueur scientifique et motivation personnalisée pour des résultats durables.',
     seoTitle: 'Léo Paulet-Volpini - Coach Sportif Diplômé STAPS Nice | MP Training',
     seoDescription:
-      'Léo Paulet-Volpini, coach sportif diplômé STAPS Nice. Ancien basketteur professionnel, expert en perte de poids, prise de masse et force athlétique.',
+      'Léo Paulet-Volpini, coach sportif diplômé STAPS Nice. Basketteur semi-professionnel, expert en perte de poids, prise de masse et force athlétique.',
   },
   {
     id: 'yann',

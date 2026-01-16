@@ -52,12 +52,16 @@ export function Services() {
 
             {/* Content */}
             <div className="p-6">
-              <div className="mb-2 flex items-center justify-between">
+              <div className="mb-3 flex items-start justify-between gap-2">
                 <h3 className="font-heading text-xl uppercase tracking-wider text-mp-white">
                   {service.name}
                 </h3>
-                <span className="font-body text-sm text-mp-neon">{service.duration}</span>
+                {service.price && (
+                  <span className="font-heading text-2xl text-mp-neon">{service.price}</span>
+                )}
               </div>
+
+              <p className="mb-1 font-body text-xs text-mp-white/50">{service.duration}</p>
 
               <p className="mb-4 font-body text-sm text-mp-white/70">{service.description}</p>
 
