@@ -18,6 +18,22 @@ export function Contact() {
             title="Passez à l'Action"
             description="Prenez rendez-vous pour votre première séance d'essai gratuite. Nous sommes à votre écoute pour répondre à toutes vos questions."
           />
+
+          {/* CTA Buttons */}
+          <div className="mx-auto flex max-w-md flex-col gap-4 sm:flex-row">
+            <Button href={`tel:${businessInfo.phoneFormatted}`} size="lg" className="flex-1">
+              Appelez-nous
+            </Button>
+            <Button
+              href={businessInfo.social.instagram}
+              variant="secondary"
+              size="lg"
+              className="flex-1"
+            >
+              <NeonIcon name="instagram" size={20} className="mr-2" glow={false} />
+              Instagram
+            </Button>
+          </div>
         </div>
       </div>
 
@@ -118,22 +134,6 @@ export function Contact() {
                   </a>
                 </div>
               </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Button href={`tel:${businessInfo.phoneFormatted}`} size="lg" className="flex-1">
-                Appelez-nous
-              </Button>
-              <Button
-                href={businessInfo.social.instagram}
-                variant="secondary"
-                size="lg"
-                className="flex-1"
-              >
-                <NeonIcon name="instagram" size={20} className="mr-2" glow={false} />
-                Instagram
-              </Button>
             </div>
           </div>
         </div>
