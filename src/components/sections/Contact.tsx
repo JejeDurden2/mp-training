@@ -16,7 +16,7 @@ export function Contact() {
           <SectionHeader
             eyebrow="Contact"
             title="Passez à l'Action"
-            description="Prenez rendez-vous pour votre première séance d'essai gratuite. Nous sommes à votre écoute pour répondre à toutes vos questions."
+            description="Discutons de vos objectifs et construisons ensemble un programme sur-mesure. Nous sommes à votre écoute pour répondre à toutes vos questions."
           />
 
           {/* CTA Buttons */}

@@ -79,7 +79,7 @@ export const services: Service[] = [
     featured: true,
     seoTitle: 'Personal Training Nice | Coach Diplômé STAPS | MP Training',
     seoDescription:
-      "Séances de personal training à Nice avec coachs diplômés STAPS. Programme 100% personnalisé, suivi nutrition inclus. Réservez votre séance d'essai gratuite.",
+      'Séances de personal training à Nice avec coachs diplômés STAPS. Programme 100% personnalisé, suivi nutrition inclus. Contactez-nous pour un bilan personnalisé.',
   },
   {
     id: 'small-groups',
@@ -256,9 +256,9 @@ export const faqItems = [
       'Nos tarifs varient selon la formule choisie : personal training individuel, small groups (4 personnes max) ou préparation athlétique. Nous proposons également des packages avantageux. Contactez-nous pour un devis personnalisé adapté à vos objectifs.',
   },
   {
-    question: "Proposez-vous une séance d'essai gratuite ?",
+    question: 'Comment se passe la première prise de contact ?',
     answer:
-      "Oui ! Nous offrons une première séance d'essai gratuite pour découvrir notre studio, rencontrer nos coachs et tester nos programmes. C'est l'occasion idéale pour voir si MP Training correspond à vos attentes.",
+      "Lors de notre premier échange, nous discutons de vos objectifs, votre niveau actuel et vos disponibilités. Cela nous permet de vous proposer un programme sur-mesure parfaitement adapté à vos besoins. C'est l'occasion idéale de découvrir notre approche et de voir si MP Training correspond à vos attentes.",
   },
   {
     question: 'Faut-il être en forme pour commencer le coaching sportif ?',
@@ -288,7 +288,7 @@ export const faqItems = [
   {
     question: 'Puis-je choisir mon coach ?',
     answer:
-      "Tout à fait ! Léo et Yann ont des spécialités complémentaires (force/musculation pour Léo, endurance/performance pour Yann). Lors de votre séance d'essai, nous vous orienterons vers le coach le plus adapté à vos objectifs, mais le choix final vous appartient.",
+      'Tout à fait ! Léo et Yann ont des spécialités complémentaires (force/musculation pour Léo, endurance/performance pour Yann). Lors de notre premier échange, nous vous orienterons vers le coach le plus adapté à vos objectifs, mais le choix final vous appartient.',
   },
 ];
 
