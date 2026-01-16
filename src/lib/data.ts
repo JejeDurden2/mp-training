@@ -18,8 +18,8 @@ export const businessInfo = {
     country: 'France',
     neighborhood: 'Libération',
     coordinates: {
-      lat: 43.7102,
-      lng: 7.262,
+      lat: 43.7117389,
+      lng: 7.2602488,
     },
   },
   hours: {

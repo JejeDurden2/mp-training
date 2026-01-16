@@ -4,7 +4,10 @@ import { Button } from '@/components/ui/Button';
 import { businessInfo } from '@/lib/data';
 
 export function Contact() {
-  const mapUrl = `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2884.5!2d${businessInfo.address.coordinates.lng}!3d${businessInfo.address.coordinates.lat}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDQyJzM2LjciTiA3wrAxNScyOC4yIkU!5e0!3m2!1sfr!2sfr!4v1`;
+  const addressQuery = encodeURIComponent(
+    `${businessInfo.address.street}, ${businessInfo.address.postalCode} ${businessInfo.address.city}, France`,
+  );
+  const mapUrl = `https://maps.google.com/maps?q=${addressQuery}&t=&z=16&ie=UTF8&iwloc=&output=embed`;
 
   return (
     <Section id="contact" className="bg-mp-black" noPadding>
