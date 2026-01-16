@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     siteName: 'MP Training Nice',
     title: "MP Training Nice | Coaching Privé & Personal Training d'Excellence",
     description:
-      'Studio de coaching privé à Nice. Personal training avec Léo & Yann, coachs diplômés STAPS. Petits groupes (max 4), préparation athlétique.',
+      'Studio de coaching privé à Nice. Personal training avec Léo & Yann, coachs diplômés STAPS. Petits groupes, préparation athlétique.',
     images: [
       {
         url: '/opengraph-image.jpg',
