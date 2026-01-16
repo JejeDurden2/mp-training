@@ -87,8 +87,8 @@ export const services: Service[] = [
     slug: 'small-group-training-nice',
     icon: 'users',
     duration: '60 minutes',
-    maxParticipants: 4,
-    price: '35€/pers.',
+    maxParticipants: 6,
+    price: '20€/pers.',
     description:
       "Entraînement en petit groupe (maximum 4 personnes) pour allier l'énergie collective et l'attention personnalisée. Parfait pour la motivation et l'émulation.",
     features: [
@@ -101,7 +101,7 @@ export const services: Service[] = [
     ],
     image: '/images/room5.jpeg',
     featured: false,
-    seoTitle: 'Small Group Training Nice | Cours 4 Personnes Max | MP Training',
+    seoTitle: 'Small Group Training Nice | Cours 6 Personnes Max | MP Training',
     seoDescription:
       'Small group training à Nice (4 pers. max). Énergie du collectif + attention personnalisée. Cours de fitness en petit groupe avec coachs STAPS.',
   },
@@ -200,7 +200,7 @@ export const studioFeatures = [
   {
     icon: 'dumbbell',
     title: 'Équipement Premium',
-    description: '300m² équipés du meilleur matériel professionnel pour tous vos objectifs',
+    description: '80m² équipés du meilleur matériel professionnel pour tous vos objectifs',
   },
   {
     icon: 'users',

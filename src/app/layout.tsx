@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     default: "MP Training Nice | Coaching Privé & Personal Training d'Excellence",
   },
   description:
-    'Coaching privé à Nice avec Léo & Yann, coachs diplômés STAPS. Personal training, petits groupes (max 4), préparation athlétique. 20 Rue Théodore de Banville. ⭐ 5/5 - 25 avis. ☎ 06 27 68 33 43',
+    'Coaching privé à Nice avec Léo & Yann, coachs diplômés STAPS. Personal training, petits groupes (max 6), préparation athlétique. 20 Rue Théodore de Banville. ⭐ 5/5 - 25 avis. ☎ 06 27 68 33 43',
   keywords: [
     'coaching privé nice',
     'mp training nice',

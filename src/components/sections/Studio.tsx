@@ -12,7 +12,7 @@ export function Studio() {
       <SectionHeader
         eyebrow="Le Studio"
         title="Un Espace d'Exception"
-        description="Découvrez notre studio de coaching privé au cœur de Nice. 300m² équipés du meilleur matériel pour atteindre vos objectifs."
+        description="Découvrez notre studio de coaching privé au cœur de Nice. 80m² équipés du meilleur matériel pour atteindre vos objectifs."
       />
 
       {/* Image Gallery */}
