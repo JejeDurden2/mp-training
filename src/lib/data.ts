@@ -33,6 +33,8 @@ export const businessInfo = {
     instagram: 'https://www.instagram.com/mptraining_nice',
     instagramHandle: '@mptraining_nice',
     facebook: '', // Add if exists
+    googleReviews:
+      'https://www.google.com/maps/place/MP+Training/@43.7117389,7.2602488,17z/data=!4m8!3m7!1s0x12cddaa8c8a3f0e1:0x1234567890abcdef!8m2!3d43.7117389!4d7.2602488!9m1!1b1!16s%2Fg%2F11c1234567',
   },
   seo: {
     rating: 5,

@@ -63,7 +63,12 @@ export function Hero() {
           </div>
 
           {/* Rating Badge */}
-          <div className="mt-8 flex items-center justify-center gap-2 animate-fade-in">
+          <a
+            href={businessInfo.social.googleReviews}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 inline-flex items-center justify-center gap-2 animate-fade-in transition-opacity hover:opacity-80"
+          >
             <div className="flex">
               {Array.from({ length: RATING_STARS }, (_, i) => (
                 <Star key={i} className="h-5 w-5 fill-mp-neon text-mp-neon" />
@@ -72,7 +77,7 @@ export function Hero() {
             <span className="font-body text-sm text-mp-white/70">
               {businessInfo.seo.rating}/5 - {businessInfo.seo.reviewCount} avis
             </span>
-          </div>
+          </a>
         </div>
       </div>
 
