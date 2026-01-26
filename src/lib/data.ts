@@ -29,18 +29,27 @@ export const businessInfo = {
     },
     note: 'Sur rendez-vous uniquement',
   },
+  googlePlaceId: 'ChIJ81_GQo_RzRIRE2d3MdojHxs',
   social: {
     instagram: 'https://www.instagram.com/mptraining_nice',
     instagramHandle: '@mptraining_nice',
     facebook: '', // Add if exists
     googleReviews:
-      'https://www.google.com/maps/search/MP+Training+Nice/',
+      'https://search.google.com/local/reviews?placeid=ChIJ81_GQo_RzRIRE2d3MdojHxs',
   },
   seo: {
     rating: 5,
     reviewCount: 25,
   },
 };
+
+// Pricing
+export interface PricingTier {
+  label: string;
+  price: string;
+  unitPrice?: string;
+  highlighted?: boolean;
+}
 
 // Services
 export interface Service {
@@ -49,8 +58,8 @@ export interface Service {
   slug: string;
   icon: string;
   duration: string;
-  price?: string; // Will be added once client provides pricing
-  maxParticipants?: number; // For small groups
+  pricing?: PricingTier[];
+  maxParticipants?: number;
   description: string;
   features: string[];
   image: string;
@@ -66,7 +75,10 @@ export const services: Service[] = [
     slug: 'personal-training-nice',
     icon: 'user',
     duration: '60 minutes',
-    price: '60€',
+    pricing: [
+      { label: '1 séance', price: '60€' },
+      { label: '10 séances', price: '450€', unitPrice: '45€/séance', highlighted: true },
+    ],
     description:
       'Coaching 100% personnalisé avec un suivi sur-mesure pour atteindre vos objectifs rapidement. Programme individualisé adapté à votre niveau et vos besoins.',
     features: [
@@ -84,13 +96,44 @@ export const services: Service[] = [
       'Séances de personal training à Nice avec coachs diplômés STAPS. Programme 100% personnalisé, suivi nutrition inclus. Contactez-nous pour un bilan personnalisé.',
   },
   {
+    id: 'duo-training',
+    name: 'Duo Training',
+    slug: 'duo-training-nice',
+    icon: 'user-plus',
+    duration: '60 minutes',
+    maxParticipants: 2,
+    pricing: [
+      { label: '1 séance', price: '80€', unitPrice: '40€/pers.' },
+      { label: '10 séances', price: '600€', unitPrice: '30€/pers./séance', highlighted: true },
+    ],
+    description:
+      "Entraînement à deux pour allier motivation mutuelle et coaching personnalisé. Partagez l'effort et les résultats avec un partenaire.",
+    features: [
+      'Coaching à deux',
+      'Programme personnalisé',
+      'Motivation partagée',
+      'Tarif avantageux',
+      'Suivi individuel',
+      'Flexibilité horaire',
+    ],
+    image: '/images/room1.jpeg',
+    featured: false,
+    seoTitle: 'Duo Training Nice | Coaching à Deux | MP Training',
+    seoDescription:
+      'Duo training à Nice avec coachs diplômés STAPS. Entraînement à deux, programme personnalisé, tarifs avantageux.',
+  },
+  {
     id: 'small-groups',
     name: 'Small Groups',
     slug: 'small-group-training-nice',
     icon: 'users',
     duration: '60 minutes',
     maxParticipants: 6,
-    price: '20€/pers.',
+    pricing: [
+      { label: '1 séance', price: '30€' },
+      { label: '5 séances', price: '120€', unitPrice: '24€/séance' },
+      { label: '10 séances', price: '200€', unitPrice: '20€/séance', highlighted: true },
+    ],
     description:
       "Entraînement en petit groupe (maximum 6 personnes) pour allier l'énergie collective et l'attention personnalisée. Parfait pour la motivation et l'émulation.",
     features: [
@@ -113,7 +156,10 @@ export const services: Service[] = [
     slug: 'preparation-physique-nice',
     icon: 'activity',
     duration: '60 minutes',
-    price: '60€',
+    pricing: [
+      { label: '1 séance', price: '60€' },
+      { label: '10 séances', price: '450€', unitPrice: '45€/séance', highlighted: true },
+    ],
     description:
       'Programme spécifique pour améliorer vos performances sportives et prévenir les blessures. Adapté aux athlètes amateurs et professionnels.',
     features: [
@@ -180,7 +226,7 @@ export const coaches: Coach[] = [
     name: 'Yann',
     fullName: 'Yann Massyn',
     slug: 'yann-massyn',
-    title: 'Vice-Champion du Monde IRONMAN',
+    title: 'Coach Expert',
     phone: '07 78 86 16 92',
     phoneFormatted: '+33778861692',
     image: '/images/Yann.jpeg',
