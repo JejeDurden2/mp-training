@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Bebas_Neue, Inter } from 'next/font/google';
 import Script from 'next/script';
+import { Providers } from '@/components/Providers';
 import './globals.css';
 
 const GTM_ID = 'GTM-PXP79X5X';
@@ -128,7 +129,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

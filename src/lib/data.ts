@@ -34,7 +34,7 @@ export const businessInfo = {
     instagramHandle: '@mptraining_nice',
     facebook: '', // Add if exists
     googleReviews:
-      'https://www.google.com/maps/place/MP+Training/@43.7117389,7.2602488,17z/data=!4m8!3m7!1s0x12cddaa8c8a3f0e1:0x1234567890abcdef!8m2!3d43.7117389!4d7.2602488!9m1!1b1!16s%2Fg%2F11c1234567',
+      'https://www.google.com/maps/search/MP+Training+Nice/',
   },
   seo: {
     rating: 5,
@@ -92,9 +92,9 @@ export const services: Service[] = [
     maxParticipants: 6,
     price: '20€/pers.',
     description:
-      "Entraînement en petit groupe (maximum 4 personnes) pour allier l'énergie collective et l'attention personnalisée. Parfait pour la motivation et l'émulation.",
+      "Entraînement en petit groupe (maximum 6 personnes) pour allier l'énergie collective et l'attention personnalisée. Parfait pour la motivation et l'émulation.",
     features: [
-      'Maximum 4 personnes',
+      'Maximum 6 personnes',
       'Ambiance conviviale',
       'Suivi personnalisé',
       'Tarifs avantageux',
@@ -105,7 +105,7 @@ export const services: Service[] = [
     featured: false,
     seoTitle: 'Small Group Training Nice | Cours 6 Personnes Max | MP Training',
     seoDescription:
-      'Small group training à Nice (4 pers. max). Énergie du collectif + attention personnalisée. Cours de fitness en petit groupe avec coachs STAPS.',
+      'Small group training à Nice (6 pers. max). Énergie du collectif + attention personnalisée. Cours de fitness en petit groupe avec coachs STAPS.',
   },
   {
     id: 'athletic-prep',
@@ -139,6 +139,8 @@ export interface Coach {
   fullName: string;
   slug: string;
   title: string;
+  phone: string;
+  phoneFormatted: string;
   image: string;
   imageFocus: string;
   bio: string;
@@ -158,13 +160,15 @@ export const coaches: Coach[] = [
     fullName: 'Léo Paulet-Volpini',
     slug: 'leo-paulet-volpini',
     title: 'Coach Expert',
+    phone: '06 27 68 33 43',
+    phoneFormatted: '+33627683343',
     image: '/images/Leo.jpeg',
     imageFocus: 'center 10%',
     bio: "Basketteur semi-professionnel, Léo apporte 8 ans d'expérience en préparation physique et coaching privé. Sa passion pour le sport et son expertise technique garantissent des résultats concrets.",
     longBio:
       "Diplômé de l'UFR STAPS Nice, Léo a développé une expertise unique combinant sa carrière de basketteur semi-professionnel et sa formation scientifique en sciences du sport. Avec plus de 8 ans d'expérience en coaching privé, il a accompagné des centaines de clients vers leurs objectifs, qu'il s'agisse de perte de poids, de prise de masse musculaire ou de préparation sportive.",
     specialties: ['Perte de poids', 'Force athlétique', 'Prise de masse', 'Basketball'],
-    certifications: ['Diplômé UFR STAPS Nice', 'BPJEPS AGFF', 'Préparateur physique'],
+    certifications: ['Diplômé UFR STAPS Nice', 'Préparateur physique'],
     philosophy:
       'Pour Léo, chaque client est unique et mérite un programme sur-mesure. Son approche allie rigueur scientifique et motivation personnalisée pour des résultats durables.',
     seoTitle: 'Léo Paulet-Volpini - Coach Sportif Diplômé STAPS Nice | MP Training',
@@ -177,6 +181,8 @@ export const coaches: Coach[] = [
     fullName: 'Yann Massyn',
     slug: 'yann-massyn',
     title: 'Vice-Champion du Monde IRONMAN',
+    phone: '07 78 86 16 92',
+    phoneFormatted: '+33778861692',
     image: '/images/Yann.jpeg',
     imageFocus: 'center center',
     bio: "Athlète d'élite et coach passionné, Yann vous guide vers vos objectifs avec méthode et motivation. Son expérience de haut niveau apporte une dimension unique à chaque séance.",
@@ -207,7 +213,7 @@ export const studioFeatures = [
   {
     icon: 'users',
     title: 'Petits Effectifs',
-    description: 'Maximum 4 personnes par groupe pour un suivi optimal et personnalisé',
+    description: 'Maximum 6 personnes par groupe pour un suivi optimal et personnalisé',
   },
   {
     icon: 'map-pin',
@@ -255,7 +261,7 @@ export const faqItems = [
   {
     question: 'Combien coûte une séance de coaching sportif à Nice ?',
     answer:
-      'Nos tarifs varient selon la formule choisie : personal training individuel, small groups (4 personnes max) ou préparation athlétique. Nous proposons également des packages avantageux. Contactez-nous pour un devis personnalisé adapté à vos objectifs.',
+      'Nos tarifs varient selon la formule choisie : personal training individuel, small groups (6 personnes max) ou préparation athlétique. Nous proposons également des packages avantageux. Contactez-nous pour un devis personnalisé adapté à vos objectifs.',
   },
   {
     question: 'Comment se passe la première prise de contact ?',
@@ -270,7 +276,7 @@ export const faqItems = [
   {
     question: 'Quelle est la différence entre personal training et small group ?',
     answer:
-      "Le personal training est une séance 1-on-1 avec un coach dédié, 100% personnalisée. Le small group (maximum 4 personnes) combine l'énergie du collectif avec un suivi personnalisé, à un tarif plus avantageux.",
+      "Le personal training est une séance 1-on-1 avec un coach dédié, 100% personnalisée. Le small group (maximum 6 personnes) combine l'énergie du collectif avec un suivi personnalisé, à un tarif plus avantageux.",
   },
   {
     question: 'Où se situe MP Training à Nice ?',

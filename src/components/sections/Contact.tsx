@@ -1,7 +1,8 @@
 import { Section, SectionHeader } from '@/components/ui/Section';
 import { NeonIcon } from '@/components/ui/NeonIcon';
 import { Button } from '@/components/ui/Button';
-import { businessInfo } from '@/lib/data';
+import { PhoneCallButton } from '@/components/ui/PhoneCallButton';
+import { businessInfo, coaches } from '@/lib/data';
 
 export function Contact() {
   const addressQuery = encodeURIComponent(
@@ -21,9 +22,9 @@ export function Contact() {
 
           {/* CTA Buttons */}
           <div className="mx-auto flex max-w-md flex-col gap-4 sm:flex-row">
-            <Button href={`tel:${businessInfo.phoneFormatted}`} size="lg" className="flex-1">
+            <PhoneCallButton size="lg" className="flex-1">
               Appelez-nous
-            </Button>
+            </PhoneCallButton>
             <Button
               href={businessInfo.social.instagram}
               variant="secondary"
@@ -90,12 +91,15 @@ export function Contact() {
                   <h4 className="font-heading text-lg uppercase tracking-wider text-mp-white">
                     Téléphone
                   </h4>
-                  <a
-                    href={`tel:${businessInfo.phoneFormatted}`}
-                    className="mt-1 block font-body text-mp-white/70 transition-colors hover:text-mp-neon"
-                  >
-                    {businessInfo.phone}
-                  </a>
+                  {coaches.map((coach) => (
+                    <a
+                      key={coach.id}
+                      href={`tel:${coach.phoneFormatted}`}
+                      className="mt-1 block font-body text-mp-white/70 transition-colors hover:text-mp-neon"
+                    >
+                      {coach.name} — {coach.phone}
+                    </a>
+                  ))}
                 </div>
               </div>
 

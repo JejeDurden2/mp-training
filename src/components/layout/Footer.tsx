@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Instagram, Phone, MapPin } from 'lucide-react';
-import { businessInfo } from '@/lib/data';
+import { businessInfo, coaches } from '@/lib/data';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -40,15 +40,17 @@ export function Footer() {
                   {businessInfo.address.postalCode} {businessInfo.address.city}
                 </span>
               </li>
-              <li>
-                <a
-                  href={`tel:${businessInfo.phoneFormatted}`}
-                  className="flex items-center gap-2 transition-colors hover:text-mp-neon"
-                >
-                  <Phone size={16} className="text-mp-neon" />
-                  {businessInfo.phone}
-                </a>
-              </li>
+              {coaches.map((coach) => (
+                <li key={coach.id}>
+                  <a
+                    href={`tel:${coach.phoneFormatted}`}
+                    className="flex items-center gap-2 transition-colors hover:text-mp-neon"
+                  >
+                    <Phone size={16} className="text-mp-neon" />
+                    {coach.name} — {coach.phone}
+                  </a>
+                </li>
+              ))}
               <li>
                 <a
                   href={businessInfo.social.instagram}

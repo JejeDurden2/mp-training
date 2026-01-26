@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { ChevronDown, Star } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { PhoneCallButton } from '@/components/ui/PhoneCallButton';
 import { businessInfo } from '@/lib/data';
 
 const RATING_STARS = 5;
@@ -54,9 +55,9 @@ export function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in">
-            <Button href={`tel:${businessInfo.phoneFormatted}`} size="lg">
+            <PhoneCallButton size="lg">
               Réserver ma séance
-            </Button>
+            </PhoneCallButton>
             <Button href="#studio" variant="secondary" size="lg">
               Découvrir le studio
             </Button>

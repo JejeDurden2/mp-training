@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { businessInfo } from '@/lib/data';
+import { usePhoneModal } from '@/components/ui/PhoneModal';
 
 const navLinks = [
   { href: '#studio', label: 'Le Studio' },
@@ -17,6 +17,7 @@ const navLinks = [
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { openPhoneModal } = usePhoneModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,13 +78,13 @@ export function Navigation() {
 
             {/* CTA Button */}
             <div className="hidden md:block">
-              <a
-                href={`tel:${businessInfo.phoneFormatted}`}
+              <button
+                onClick={openPhoneModal}
                 className="neon-button flex items-center gap-2 rounded-full px-5 py-2.5 font-heading text-sm uppercase tracking-wider text-mp-white transition-all hover:shadow-neon-lg"
               >
                 <Phone size={16} />
                 Appeler
-              </a>
+              </button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -141,13 +142,16 @@ export function Navigation() {
 
           {/* Mobile Menu CTA */}
           <div className="pb-12 text-center">
-            <a
-              href={`tel:${businessInfo.phoneFormatted}`}
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false);
+                openPhoneModal();
+              }}
               className="neon-button inline-flex items-center gap-3 rounded-full px-8 py-4 font-heading text-lg uppercase tracking-wider text-mp-white"
             >
               <Phone size={20} />
-              {businessInfo.phone}
-            </a>
+              Appeler
+            </button>
           </div>
         </div>
       </div>
