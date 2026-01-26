@@ -20,7 +20,7 @@ export function Services() {
           <article
             key={service.id}
             className={cn(
-              'group glass-card relative overflow-hidden rounded-2xl transition-all hover:scale-[1.02]',
+              'group glass-card relative flex flex-col overflow-hidden rounded-2xl transition-all hover:scale-[1.02]',
               service.featured && 'ring-2 ring-mp-neon/50',
             )}
           >
@@ -51,7 +51,7 @@ export function Services() {
             </div>
 
             {/* Content */}
-            <div className="p-6">
+            <div className="flex flex-1 flex-col p-6">
               <div className="mb-3 flex items-start justify-between gap-2">
                 <h3 className="font-heading text-xl uppercase tracking-wider text-mp-white">
                   {service.name}
@@ -116,7 +116,7 @@ export function Services() {
               <Button
                 href="#contact"
                 variant={service.featured ? 'primary' : 'secondary'}
-                className="w-full"
+                className="mt-auto w-full"
               >
                 En savoir plus
               </Button>
