@@ -13,7 +13,7 @@ function generateLocalBusinessSchema() {
     email: businessInfo.email,
     image: 'https://www.mptraining.fr/images/room2.jpeg',
     logo: 'https://www.mptraining.fr/images/logo.svg',
-    priceRange: '€€€',
+    priceRange: '€€',
     address: {
       '@type': 'PostalAddress',
       streetAddress: businessInfo.address.street,
@@ -53,6 +53,11 @@ function generateLocalBusinessSchema() {
           name: service.name,
           description: service.description,
         },
+        ...(service.pricing &&
+          service.pricing.length > 0 && {
+            price: service.pricing[0].price.replace('€', ''),
+            priceCurrency: 'EUR',
+          }),
       })),
     },
     employee: coaches.map((coach) => ({

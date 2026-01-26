@@ -1,5 +1,6 @@
 import {
   User,
+  UserPlus,
   Users,
   Activity,
   Phone,
@@ -17,6 +18,7 @@ import { cn } from '@/lib/utils';
 
 const iconMap: Record<string, LucideIcon> = {
   user: User,
+  'user-plus': UserPlus,
   users: Users,
   activity: Activity,
   phone: Phone,

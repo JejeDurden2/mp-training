@@ -15,7 +15,7 @@ export function Services() {
       />
 
       {/* Services Grid */}
-      <div className="grid gap-8 md:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2">
         {services.map((service) => (
           <article
             key={service.id}
@@ -38,7 +38,7 @@ export function Services() {
                 alt={`${service.name} - MP Training Nice`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 768px) 100vw, 33vw"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-mp-black via-mp-black/50 to-transparent" />
 
@@ -56,8 +56,10 @@ export function Services() {
                 <h3 className="font-heading text-xl uppercase tracking-wider text-mp-white">
                   {service.name}
                 </h3>
-                {service.price && (
-                  <span className="font-heading text-2xl text-mp-neon">{service.price}</span>
+                {service.pricing && service.pricing.length > 0 && (
+                  <span className="font-heading text-lg text-mp-neon">
+                    dès {service.pricing[0].price}
+                  </span>
                 )}
               </div>
 
@@ -65,9 +67,41 @@ export function Services() {
 
               <p className="mb-4 font-body text-sm text-mp-white/70">{service.description}</p>
 
+              {/* Pricing Tiers */}
+              {service.pricing && service.pricing.length > 0 && (
+                <div className="mb-4 space-y-2">
+                  {service.pricing.map((tier) => (
+                    <div
+                      key={tier.label}
+                      className={cn(
+                        'flex items-center justify-between rounded-lg px-3 py-2',
+                        tier.highlighted
+                          ? 'border border-mp-neon/30 bg-mp-neon/10'
+                          : 'bg-mp-white/5',
+                      )}
+                    >
+                      <div className="flex flex-col">
+                        <span className="font-body text-sm text-mp-white/80">{tier.label}</span>
+                        {tier.unitPrice && (
+                          <span className="font-body text-xs text-mp-neon">{tier.unitPrice}</span>
+                        )}
+                      </div>
+                      <span
+                        className={cn(
+                          'font-heading text-lg',
+                          tier.highlighted ? 'text-mp-neon' : 'text-mp-white',
+                        )}
+                      >
+                        {tier.price}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              )}
+
               {/* Features List */}
               <ul className="mb-6 space-y-2">
-                {service.features.slice(0, 4).map((feature) => (
+                {service.features.slice(0, 3).map((feature) => (
                   <li
                     key={feature}
                     className="flex items-center gap-2 font-body text-sm text-mp-white/60"

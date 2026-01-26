@@ -307,7 +307,7 @@ export const faqItems = [
   {
     question: 'Combien coûte une séance de coaching sportif à Nice ?',
     answer:
-      'Nos tarifs varient selon la formule choisie : personal training individuel, small groups (6 personnes max) ou préparation athlétique. Nous proposons également des packages avantageux. Contactez-nous pour un devis personnalisé adapté à vos objectifs.',
+      'Nos tarifs varient selon la formule : personal training individuel à partir de 60€/séance (450€ les 10 séances), duo training à 80€/séance (600€ les 10 séances), et small groups à partir de 30€/séance avec des packages avantageux (5 séances à 120€, 10 séances à 200€). La préparation athlétique est à 60€/séance (450€ les 10 séances).',
   },
   {
     question: 'Comment se passe la première prise de contact ?',
