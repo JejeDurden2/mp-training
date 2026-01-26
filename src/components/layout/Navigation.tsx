@@ -80,7 +80,8 @@ export function Navigation() {
             <div className="hidden md:block">
               <button
                 onClick={openPhoneModal}
-                className="neon-button flex items-center gap-2 rounded-full px-5 py-2.5 font-heading text-sm uppercase tracking-wider text-mp-white transition-all hover:shadow-neon-lg"
+                className="neon-button flex items-center gap-2 rounded-full px-5 py-3 font-heading text-sm uppercase tracking-wider text-mp-white transition-all hover:shadow-neon-lg"
+                aria-label="Ouvrir le formulaire d'appel pour contacter un coach"
               >
                 <Phone size={16} />
                 Appeler

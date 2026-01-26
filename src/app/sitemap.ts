@@ -12,28 +12,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${baseUrl}/#studio`,
+      url: `${baseUrl}/mentions-legales`,
       lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
     {
-      url: `${baseUrl}/#services`,
+      url: `${baseUrl}/confidentialite`,
       lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/#coachs`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/#contact`,
-      lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.9,
+      changeFrequency: 'yearly',
+      priority: 0.3,
     },
   ];
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useCallback, useEffect, type ReactNode } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect, useRef, type ReactNode } from 'react';
 import Image from 'next/image';
 import { Phone, X } from 'lucide-react';
 import { coaches } from '@/lib/data';
@@ -26,9 +26,17 @@ export function usePhoneModal(): PhoneModalContextValue {
 
 export function PhoneModalProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const previousFocusRef = useRef<HTMLElement | null>(null);
 
-  const openPhoneModal = useCallback(() => setIsOpen(true), []);
-  const close = useCallback(() => setIsOpen(false), []);
+  const openPhoneModal = useCallback(() => {
+    previousFocusRef.current = document.activeElement as HTMLElement;
+    setIsOpen(true);
+  }, []);
+  const close = useCallback(() => {
+    setIsOpen(false);
+    previousFocusRef.current?.focus();
+  }, []);
 
   // Close on Escape key
   useEffect(() => {
@@ -39,6 +47,44 @@ export function PhoneModalProvider({ children }: { children: ReactNode }) {
     document.addEventListener('keydown', handleKey);
     return () => document.removeEventListener('keydown', handleKey);
   }, [isOpen, close]);
+
+  // Focus trap
+  useEffect(() => {
+    if (!isOpen || !modalRef.current) return;
+
+    const modal = modalRef.current;
+    const focusableSelector =
+      'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+    const focusFirst = () => {
+      const firstFocusable = modal.querySelector<HTMLElement>(focusableSelector);
+      firstFocusable?.focus();
+    };
+
+    // Focus first element on open
+    requestAnimationFrame(focusFirst);
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== 'Tab') return;
+
+      const focusableElements = modal.querySelectorAll<HTMLElement>(focusableSelector);
+      if (focusableElements.length === 0) return;
+
+      const first = focusableElements[0];
+      const last = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleTab);
+    return () => document.removeEventListener('keydown', handleTab);
+  }, [isOpen]);
 
   // Lock body scroll when open
   useEffect(() => {
@@ -75,8 +121,9 @@ export function PhoneModalProvider({ children }: { children: ReactNode }) {
 
         {/* Modal Content */}
         <div
+          ref={modalRef}
           className={cn(
-            'relative w-full max-w-lg rounded-2xl border border-mp-white/10 bg-mp-black/80 backdrop-blur-xl p-6 sm:p-8 shadow-2xl transition-all duration-300',
+            'relative w-full max-w-[calc(100vw-2rem)] sm:max-w-lg rounded-2xl border border-mp-white/10 bg-mp-black/80 backdrop-blur-xl p-6 sm:p-8 shadow-2xl transition-all duration-300',
             isOpen ? 'scale-100 translate-y-0' : 'scale-95 translate-y-4',
           )}
         >

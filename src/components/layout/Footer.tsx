@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="border-t border-mp-white/10 bg-mp-black">
       <div className="container-custom py-12">
-        <div className="grid gap-10 pt-4 md:gap-8 md:grid-cols-3">
+        <div className="grid gap-8 pt-4 md:gap-10 md:grid-cols-3">
           {/* Logo & Description */}
           <div>
             <Image
@@ -28,9 +28,9 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="mb-4 mt-2 font-heading text-lg uppercase tracking-wider text-mp-white md:mt-0">
+            <h3 className="mb-4 mt-2 font-heading text-lg uppercase tracking-wider text-mp-white md:mt-0">
               Contact
-            </h4>
+            </h3>
             <ul className="space-y-3 font-body text-sm text-mp-white/70">
               <li className="flex items-start gap-2">
                 <MapPin size={16} className="mt-0.5 shrink-0 text-mp-neon" />
@@ -67,9 +67,9 @@ export function Footer() {
 
           {/* Hours */}
           <div>
-            <h4 className="mb-4 mt-2 font-heading text-lg uppercase tracking-wider text-mp-white md:mt-0">
+            <h3 className="mb-4 mt-2 font-heading text-lg uppercase tracking-wider text-mp-white md:mt-0">
               Horaires
-            </h4>
+            </h3>
             <p className="font-body text-sm text-mp-white/70">
               {businessInfo.hours.weekdays.days}
               <br />

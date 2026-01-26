@@ -41,7 +41,7 @@ export function Contact() {
       {/* Contact Content */}
       <div className="grid lg:grid-cols-2">
         {/* Map */}
-        <div className="relative h-[400px] lg:h-auto lg:min-h-[600px]">
+        <div className="relative h-[50vh] md:h-[60vh] lg:h-auto lg:min-h-[600px]">
           <iframe
             src={mapUrl}
             width="100%"
@@ -58,7 +58,7 @@ export function Contact() {
         </div>
 
         {/* Contact Info */}
-        <div className="flex items-center bg-mp-black p-8 lg:p-16">
+        <div className="flex items-center bg-mp-black p-4 sm:p-8 lg:p-16">
           <div className="w-full max-w-md mx-auto lg:mx-0">
             {/* Contact Methods */}
             <div className="space-y-6 mb-8">
@@ -68,9 +68,9 @@ export function Contact() {
                   <NeonIcon name="map-pin" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg uppercase tracking-wider text-mp-white">
+                  <h3 className="font-heading text-lg uppercase tracking-wider text-mp-white">
                     Adresse
-                  </h4>
+                  </h3>
                   <p className="mt-1 font-body text-mp-white/70">
                     {businessInfo.address.street}
                     <br />
@@ -88,9 +88,9 @@ export function Contact() {
                   <NeonIcon name="phone" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg uppercase tracking-wider text-mp-white">
+                  <h3 className="font-heading text-lg uppercase tracking-wider text-mp-white">
                     Téléphone
-                  </h4>
+                  </h3>
                   {coaches.map((coach) => (
                     <a
                       key={coach.id}
@@ -109,9 +109,9 @@ export function Contact() {
                   <NeonIcon name="clock" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg uppercase tracking-wider text-mp-white">
+                  <h3 className="font-heading text-lg uppercase tracking-wider text-mp-white">
                     Horaires
-                  </h4>
+                  </h3>
                   <p className="mt-1 font-body text-mp-white/70">
                     {businessInfo.hours.weekdays.days}: {businessInfo.hours.weekdays.hours}
                   </p>
@@ -125,9 +125,9 @@ export function Contact() {
                   <NeonIcon name="instagram" size={24} />
                 </div>
                 <div>
-                  <h4 className="font-heading text-lg uppercase tracking-wider text-mp-white">
+                  <h3 className="font-heading text-lg uppercase tracking-wider text-mp-white">
                     Instagram
-                  </h4>
+                  </h3>
                   <a
                     href={businessInfo.social.instagram}
                     target="_blank"

@@ -23,6 +23,7 @@ export function Studio() {
             src={featuredImage.src}
             alt={featuredImage.alt}
             fill
+            loading="lazy"
             className="object-cover image-hover-zoom"
             sizes="(max-width: 768px) 100vw, 66vw"
           />
@@ -36,6 +37,7 @@ export function Studio() {
               src={image.src}
               alt={image.alt}
               fill
+              loading="lazy"
               className="object-cover image-hover-zoom"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
