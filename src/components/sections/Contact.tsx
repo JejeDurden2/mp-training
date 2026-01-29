@@ -41,7 +41,7 @@ export function Contact() {
       {/* Contact Content */}
       <div className="grid lg:grid-cols-2">
         {/* Map */}
-        <div className="relative h-[50vh] md:h-[60vh] lg:h-auto lg:min-h-[600px]">
+        <div className="relative aspect-[4/3] md:aspect-video lg:aspect-auto lg:min-h-[600px]">
           <iframe
             src={mapUrl}
             width="100%"
