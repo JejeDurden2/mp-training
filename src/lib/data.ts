@@ -116,7 +116,7 @@ export const services: Service[] = [
       'Suivi individuel',
       'Flexibilité horaire',
     ],
-    image: '/images/room1.jpeg',
+    image: '/images/room5.jpeg',
     featured: false,
     seoTitle: 'Duo Training Nice | Coaching à Deux | MP Training',
     seoDescription:
@@ -144,7 +144,7 @@ export const services: Service[] = [
       'Variété des exercices',
       'Entraide groupe',
     ],
-    image: '/images/room5.jpeg',
+    image: '/images/room6.jpeg',
     featured: false,
     seoTitle: 'Small Group Training Nice | Cours 6 Personnes Max | MP Training',
     seoDescription:
@@ -170,7 +170,7 @@ export const services: Service[] = [
       'Périodisation entraînement',
       'Optimisation récupération',
     ],
-    image: '/images/room3.jpeg',
+    image: '/images/room1.jpeg',
     featured: false,
     seoTitle: 'Préparation Physique Nice | Sportifs & Athlètes | MP Training',
     seoDescription:
