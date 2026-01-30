@@ -12,7 +12,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/room2.jpeg"
+          src="/images/A7401579.jpg"
           alt="Studio MP Training Nice - Salle de coaching privé"
           fill
           className="object-cover"

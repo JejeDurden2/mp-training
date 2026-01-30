@@ -170,7 +170,7 @@ export const services: Service[] = [
       'Périodisation entraînement',
       'Optimisation récupération',
     ],
-    image: '/images/room1.jpeg',
+    image: '/images/A7401504.jpg',
     featured: false,
     seoTitle: 'Préparation Physique Nice | Sportifs & Athlètes | MP Training',
     seoDescription:
@@ -276,28 +276,43 @@ export const studioFeatures = [
 // Studio Images
 export const studioImages = [
   {
-    src: '/images/room1.jpeg',
-    alt: 'Espace cardio du studio MP Training Nice avec équipements premium',
-    featured: false,
-  },
-  {
-    src: '/images/room2.jpeg',
+    src: '/images/A7401579.jpg',
     alt: "Studio de coaching sportif privé moderne à Nice - Vue d'ensemble",
     featured: true,
   },
   {
-    src: '/images/room3.jpeg',
+    src: '/images/A7401504.jpg',
+    alt: 'Espace cardio du studio MP Training Nice avec équipements premium',
+    featured: false,
+  },
+  {
+    src: '/images/A7401540.jpg',
     alt: 'Zone de force avec haltères, kettlebells et racks pour préparation athlétique Nice',
     featured: false,
   },
   {
-    src: '/images/room4.jpeg',
+    src: '/images/A7401608.jpg',
     alt: "Salle d'entraînement privée MP Training Nice - Personal training",
     featured: false,
   },
   {
-    src: '/images/room5.jpeg',
+    src: '/images/A7401639.jpg',
     alt: 'Équipement de musculation haut de gamme - Small group training Nice',
+    featured: false,
+  },
+  {
+    src: '/images/A7401673.jpg',
+    alt: 'Espace entraînement fonctionnel MP Training Nice',
+    featured: false,
+  },
+  {
+    src: '/images/A7402329.jpg',
+    alt: 'Studio MP Training Nice - Zone musculation',
+    featured: false,
+  },
+  {
+    src: '/images/A7402405.jpg',
+    alt: 'Coaching privé MP Training Nice - Équipements haut de gamme',
     featured: false,
   },
 ];
