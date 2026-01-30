@@ -1,11 +1,31 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
 import { Section, SectionHeader } from '@/components/ui/Section';
 import { NeonIcon } from '@/components/ui/NeonIcon';
+import { Lightbox } from '@/components/ui/Lightbox';
 import { studioFeatures, studioImages } from '@/lib/data';
 
 export function Studio() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const featuredImage = studioImages.find((img) => img.featured) || studioImages[0];
-  const otherImages = studioImages.filter((img) => !img.featured).slice(0, 4);
+  const otherImages = studioImages.filter((img) => !img.featured).slice(0, 2);
+  const openLightbox = (imageSrc: string) => {
+    const index = studioImages.findIndex((img) => img.src === imageSrc);
+    setCurrentIndex(index >= 0 ? index : 0);
+    setLightboxOpen(true);
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex((prev) => (prev === 0 ? studioImages.length - 1 : prev - 1));
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === studioImages.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <Section id="studio" className="bg-mp-black">
@@ -18,7 +38,11 @@ export function Studio() {
       {/* Image Gallery */}
       <div className="grid gap-4 md:grid-cols-3 md:grid-rows-2">
         {/* Featured Image */}
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 md:aspect-auto">
+        <button
+          type="button"
+          onClick={() => openLightbox(featuredImage.src)}
+          className="relative aspect-[4/3] overflow-hidden rounded-2xl md:col-span-2 md:row-span-2 md:aspect-auto cursor-pointer focus:outline-none focus:ring-2 focus:ring-mp-neon"
+        >
           <Image
             src={featuredImage.src}
             alt={featuredImage.alt}
@@ -28,11 +52,16 @@ export function Studio() {
             sizes="(max-width: 768px) 100vw, 66vw"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-mp-black/60 to-transparent" />
-        </div>
+        </button>
 
         {/* Secondary Images */}
-        {otherImages.slice(0, 2).map((image) => (
-          <div key={image.src} className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+        {otherImages.map((image) => (
+          <button
+            key={image.src}
+            type="button"
+            onClick={() => openLightbox(image.src)}
+            className="relative aspect-[4/3] overflow-hidden rounded-2xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-mp-neon"
+          >
             <Image
               src={image.src}
               alt={image.alt}
@@ -42,7 +71,7 @@ export function Studio() {
               sizes="(max-width: 768px) 100vw, 33vw"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-mp-black/40 to-transparent" />
-          </div>
+          </button>
         ))}
       </div>
 
@@ -63,6 +92,16 @@ export function Studio() {
           </div>
         ))}
       </div>
+
+      {/* Lightbox */}
+      <Lightbox
+        images={studioImages}
+        currentIndex={currentIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onPrev={goToPrev}
+        onNext={goToNext}
+      />
     </Section>
   );
 }

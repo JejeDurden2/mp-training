@@ -11,7 +11,7 @@ function generateLocalBusinessSchema() {
     url: 'https://www.mptraining.fr',
     telephone: businessInfo.phoneFormatted,
     email: businessInfo.email,
-    image: 'https://www.mptraining.fr/images/A7401579.jpg',
+    image: 'https://www.mptraining.fr/images/A7401639.jpg',
     logo: 'https://www.mptraining.fr/images/logo.svg',
     priceRange: '€€',
     address: {
