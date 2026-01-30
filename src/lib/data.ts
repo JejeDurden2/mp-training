@@ -310,6 +310,31 @@ export const studioImages = [
     alt: 'Équipements premium MP Training Nice',
     featured: false,
   },
+  {
+    src: '/images/A7401639.jpg',
+    alt: 'Rack de musculation avec haltères K-Well et banc réglable - Studio MP Training Nice',
+    featured: false,
+  },
+  {
+    src: '/images/A7401653.jpg',
+    alt: 'Façade extérieure du studio MP Training Nice - 20 rue Théodore de Banville quartier Libération',
+    featured: false,
+  },
+  {
+    src: '/images/A7402331.jpg',
+    alt: 'Entraînement avec traîneau de musculation et disques de poids - Préparation physique Nice',
+    featured: false,
+  },
+  {
+    src: '/images/A7402405.jpg',
+    alt: 'Disques de poids K-Well sur barre olympique - Équipement premium MP Training Nice',
+    featured: false,
+  },
+  {
+    src: '/images/A7402454.jpg',
+    alt: 'Vitrine MP Training Nice avec logo et contacts des coachs Léo Paulet-Volpini et Yann Massyn',
+    featured: false,
+  },
 ];
 
 // FAQ Items

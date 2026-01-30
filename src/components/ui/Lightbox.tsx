@@ -58,7 +58,7 @@ export function Lightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-mp-black/98 backdrop-blur-md"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black backdrop-blur-md"
       onClick={onClose}
     >
       {/* Close button */}
