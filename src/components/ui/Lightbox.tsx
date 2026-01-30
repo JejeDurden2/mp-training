@@ -58,13 +58,13 @@ export function Lightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-mp-black/95"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-navy-deep/95 backdrop-blur-sm"
       onClick={onClose}
     >
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute right-4 top-4 z-10 rounded-full bg-mp-white/10 p-2 text-mp-white transition-colors hover:bg-mp-white/20"
+        className="absolute right-4 top-4 z-10 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 p-2 text-cream transition-all duration-200 ease-out hover:bg-gold-heritage/20 hover:border-gold-heritage/30 hover:text-gold-soft"
         aria-label="Fermer"
       >
         <X size={24} />
@@ -76,7 +76,7 @@ export function Lightbox({
           e.stopPropagation();
           onPrev();
         }}
-        className="absolute left-4 z-10 rounded-full bg-mp-white/10 p-3 text-mp-white transition-colors hover:bg-mp-white/20"
+        className="absolute left-4 z-10 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 p-3 text-cream transition-all duration-200 ease-out hover:bg-gold-heritage/20 hover:border-gold-heritage/30 hover:text-gold-soft shadow-soft"
         aria-label="Image précédente"
       >
         <ChevronLeft size={32} />
@@ -103,14 +103,14 @@ export function Lightbox({
           e.stopPropagation();
           onNext();
         }}
-        className="absolute right-4 z-10 rounded-full bg-mp-white/10 p-3 text-mp-white transition-colors hover:bg-mp-white/20"
+        className="absolute right-4 z-10 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 p-3 text-cream transition-all duration-200 ease-out hover:bg-gold-heritage/20 hover:border-gold-heritage/30 hover:text-gold-soft shadow-soft"
         aria-label="Image suivante"
       >
         <ChevronRight size={32} />
       </button>
 
       {/* Counter */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-mp-white/10 px-4 py-2 text-sm text-mp-white">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 px-4 py-2 text-sm text-cream font-medium shadow-soft">
         {currentIndex + 1} / {images.length}
       </div>
     </div>

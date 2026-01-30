@@ -51,7 +51,6 @@ export function Studio() {
             className="object-cover image-hover-zoom"
             sizes="(max-width: 768px) 100vw, 66vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-mp-black/60 to-transparent" />
         </button>
 
         {/* Secondary Images */}
@@ -70,7 +69,6 @@ export function Studio() {
               className="object-cover image-hover-zoom"
               sizes="(max-width: 768px) 100vw, 33vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-mp-black/40 to-transparent" />
           </button>
         ))}
       </div>
