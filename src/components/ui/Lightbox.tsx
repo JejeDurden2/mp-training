@@ -58,13 +58,13 @@ export function Lightbox({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-navy-deep/95 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-mp-black/98 backdrop-blur-md"
       onClick={onClose}
     >
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute right-4 top-4 z-10 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 p-2 text-cream transition-all duration-200 ease-out hover:bg-gold-heritage/20 hover:border-gold-heritage/30 hover:text-gold-soft"
+        className="absolute right-4 top-4 z-10 rounded-full bg-mp-neon/10 backdrop-blur-sm border border-mp-neon/30 p-2 text-mp-white transition-all duration-200 ease-out hover:bg-mp-neon/20 hover:border-mp-neon/50 hover:text-mp-neon"
         aria-label="Fermer"
       >
         <X size={24} />
@@ -76,7 +76,7 @@ export function Lightbox({
           e.stopPropagation();
           onPrev();
         }}
-        className="absolute left-4 z-10 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 p-3 text-cream transition-all duration-200 ease-out hover:bg-gold-heritage/20 hover:border-gold-heritage/30 hover:text-gold-soft shadow-soft"
+        className="absolute left-4 z-10 rounded-full bg-mp-neon/10 backdrop-blur-sm border border-mp-neon/30 p-3 text-mp-white transition-all duration-200 ease-out hover:bg-mp-neon/20 hover:border-mp-neon/50 hover:text-mp-neon hover:shadow-[0_0_15px_rgba(0,128,255,0.4)]"
         aria-label="Image précédente"
       >
         <ChevronLeft size={32} />
@@ -103,14 +103,14 @@ export function Lightbox({
           e.stopPropagation();
           onNext();
         }}
-        className="absolute right-4 z-10 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 p-3 text-cream transition-all duration-200 ease-out hover:bg-gold-heritage/20 hover:border-gold-heritage/30 hover:text-gold-soft shadow-soft"
+        className="absolute right-4 z-10 rounded-full bg-mp-neon/10 backdrop-blur-sm border border-mp-neon/30 p-3 text-mp-white transition-all duration-200 ease-out hover:bg-mp-neon/20 hover:border-mp-neon/50 hover:text-mp-neon hover:shadow-[0_0_15px_rgba(0,128,255,0.4)]"
         aria-label="Image suivante"
       >
         <ChevronRight size={32} />
       </button>
 
       {/* Counter */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-cream/10 backdrop-blur-sm border border-cream/20 px-4 py-2 text-sm text-cream font-medium shadow-soft">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 rounded-full bg-mp-neon/10 backdrop-blur-sm border border-mp-neon/30 px-4 py-2 text-sm text-mp-white font-medium">
         {currentIndex + 1} / {images.length}
       </div>
     </div>
