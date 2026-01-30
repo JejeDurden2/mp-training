@@ -15,7 +15,7 @@ export function Hero() {
           src="/images/A7402331.jpg"
           alt="Studio MP Training Nice - Salle de coaching privé"
           fill
-          className="object-cover"
+          className="object-cover object-left md:object-center"
           priority
           quality={85}
         />
@@ -49,7 +49,7 @@ export function Hero() {
           {/* Subtitle */}
           <p className="mx-auto mb-8 max-w-2xl font-body text-base md:text-body-lg text-mp-white/80 animate-fade-in">
             Transformez-vous avec Léo & Yann, coachs diplômés STAPS.
-            <br className="hidden md:block" />
+            <br />
             Personal training, petits groupes et préparation athlétique.
           </p>
 
