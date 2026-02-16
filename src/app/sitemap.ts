@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'weekly',
       priority: 0.9,
     },
+    {
+      url: `${baseUrl}/tarifs`,
+      lastModified: new Date('2026-02-16'),
+      changeFrequency: 'monthly',
+      priority: 0.9,
+    },
     ...allCoachingPages.map((page) => ({
       url: `${baseUrl}/coaching/${page.slug}`,
       lastModified: new Date('2026-02-16'),

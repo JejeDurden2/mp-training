@@ -10,6 +10,7 @@ import { usePhoneModal } from '@/components/ui/PhoneModal';
 const navLinks = [
   { href: '/#studio', label: 'Le Studio' },
   { href: '/coaching', label: 'Coaching' },
+  { href: '/tarifs', label: 'Tarifs' },
   { href: '/#coachs', label: 'Coachs' },
   { href: '/#contact', label: 'Contact' },
 ];

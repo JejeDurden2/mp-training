@@ -88,6 +88,9 @@ export function Footer() {
               <Link href="/coaching" className="col-span-2 transition-colors hover:text-mp-neon">
                 Tous nos programmes
               </Link>
+              <Link href="/tarifs" className="col-span-2 transition-colors hover:text-mp-neon">
+                Nos tarifs
+              </Link>
               {servicePages.map((sp) => (
                 <Link
                   key={sp.slug}

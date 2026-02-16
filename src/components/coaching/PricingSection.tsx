@@ -7,9 +7,10 @@ import { services } from '@/lib/data';
 
 interface PricingSectionProps {
   serviceIds: string[];
+  showAllFeatures?: boolean;
 }
 
-export function PricingSection({ serviceIds }: PricingSectionProps) {
+export function PricingSection({ serviceIds, showAllFeatures = false }: PricingSectionProps) {
   const displayServices = services.filter((s) => serviceIds.includes(s.id));
 
   if (displayServices.length === 0) return null;
@@ -72,7 +73,7 @@ export function PricingSection({ serviceIds }: PricingSectionProps) {
             )}
 
             <ul className="space-y-2">
-              {service.features.slice(0, 3).map((feature) => (
+              {(showAllFeatures ? service.features : service.features.slice(0, 3)).map((feature) => (
                 <li
                   key={feature}
                   className="flex items-center gap-2 font-body text-sm text-mp-white/60"
