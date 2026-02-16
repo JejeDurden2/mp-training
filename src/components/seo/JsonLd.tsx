@@ -1,18 +1,18 @@
-import { businessInfo, services, coaches } from '@/lib/data';
+import { businessInfo, services, coaches, faqItems, testimonials } from '@/lib/data';
 
 function generateLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': ['LocalBusiness', 'SportsActivityLocation', 'HealthAndBeautyBusiness'],
-    '@id': 'https://www.mptraining.fr/#business',
+    '@id': 'https://mptraining.fr/#business',
     name: businessInfo.name,
     description:
       'Studio de coaching privé à Nice offrant personal training, petits groupes et préparation athlétique avec coachs diplômés STAPS.',
-    url: 'https://www.mptraining.fr',
+    url: 'https://mptraining.fr',
     telephone: businessInfo.phoneFormatted,
     email: businessInfo.email,
-    image: 'https://www.mptraining.fr/images/A7401639.jpg',
-    logo: 'https://www.mptraining.fr/images/logo.svg',
+    image: 'https://mptraining.fr/images/A7401639.jpg',
+    logo: 'https://mptraining.fr/images/logo.svg',
     priceRange: '€€',
     address: {
       '@type': 'PostalAddress',
@@ -62,13 +62,13 @@ function generateLocalBusinessSchema() {
     },
     employee: coaches.map((coach) => ({
       '@type': 'Person',
-      '@id': `https://www.mptraining.fr/coachs/${coach.slug}`,
+      '@id': `https://mptraining.fr/coachs/${coach.slug}`,
       name: coach.fullName,
       jobTitle: coach.title,
       description: coach.bio,
-      image: `https://www.mptraining.fr${coach.image}`,
+      image: `https://mptraining.fr${coach.image}`,
       worksFor: {
-        '@id': 'https://www.mptraining.fr/#business',
+        '@id': 'https://mptraining.fr/#business',
       },
       alumniOf: {
         '@type': 'CollegeOrUniversity',
@@ -83,62 +83,61 @@ function generateWebsiteSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://www.mptraining.fr/#website',
-    url: 'https://www.mptraining.fr',
+    '@id': 'https://mptraining.fr/#website',
+    url: 'https://mptraining.fr',
     name: businessInfo.name,
     description:
       'Coaching privé à Nice avec Léo & Yann. Personal training, petits groupes, préparation athlétique.',
     publisher: {
-      '@id': 'https://www.mptraining.fr/#business',
+      '@id': 'https://mptraining.fr/#business',
     },
     inLanguage: 'fr-FR',
   };
 }
 
-function generateBreadcrumbSchema() {
+function generateFAQSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Accueil',
-        item: 'https://www.mptraining.fr',
+    '@type': 'FAQPage',
+    mainEntity: faqItems.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
       },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Le Studio',
-        item: 'https://www.mptraining.fr/#studio',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Services',
-        item: 'https://www.mptraining.fr/#services',
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Coachs',
-        item: 'https://www.mptraining.fr/#coachs',
-      },
-      {
-        '@type': 'ListItem',
-        position: 5,
-        name: 'Contact',
-        item: 'https://www.mptraining.fr/#contact',
-      },
-    ],
+    })),
   };
+}
+
+function generateReviewSchema() {
+  return testimonials.map((testimonial) => ({
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    itemReviewed: {
+      '@id': 'https://mptraining.fr/#business',
+    },
+    author: {
+      '@type': 'Person',
+      name: testimonial.name,
+    },
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: testimonial.rating.toString(),
+      bestRating: '5',
+      worstRating: '1',
+    },
+    reviewBody: testimonial.text,
+    datePublished: testimonial.date,
+  }));
 }
 
 export function JsonLd() {
   const schemas = [
     generateLocalBusinessSchema(),
     generateWebsiteSchema(),
-    generateBreadcrumbSchema(),
+    generateFAQSchema(),
+    ...generateReviewSchema(),
   ];
 
   return (

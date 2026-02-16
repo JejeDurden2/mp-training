@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/api/', '/admin/'],
     },
-    sitemap: 'https://www.mptraining.fr/sitemap.xml',
+    sitemap: 'https://mptraining.fr/sitemap.xml',
   };
 }

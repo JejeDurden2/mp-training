@@ -8,10 +8,10 @@ import { cn } from '@/lib/utils';
 import { usePhoneModal } from '@/components/ui/PhoneModal';
 
 const navLinks = [
-  { href: '#studio', label: 'Le Studio' },
-  { href: '#services', label: 'Services' },
-  { href: '#coachs', label: 'Coachs' },
-  { href: '#contact', label: 'Contact' },
+  { href: '/#studio', label: 'Le Studio' },
+  { href: '/coaching', label: 'Coaching' },
+  { href: '/#coachs', label: 'Coachs' },
+  { href: '/#contact', label: 'Contact' },
 ];
 
 export function Navigation() {

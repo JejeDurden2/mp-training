@@ -65,18 +65,47 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Hours */}
+          {/* Coaching */}
           <div>
             <h3 className="mb-4 mt-2 font-heading text-lg uppercase tracking-wider text-mp-white md:mt-0">
-              Horaires
+              Coaching
             </h3>
-            <p className="font-body text-sm text-mp-white/70">
-              {businessInfo.hours.weekdays.days}
-              <br />
-              {businessInfo.hours.weekdays.hours}
-              <br />
-              <span className="text-mp-neon">{businessInfo.hours.note}</span>
-            </p>
+            <ul className="space-y-2 font-body text-sm text-mp-white/70">
+              <li>
+                <Link href="/coaching" className="transition-colors hover:text-mp-neon">
+                  Tous nos programmes
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/coaching/personal-training"
+                  className="transition-colors hover:text-mp-neon"
+                >
+                  Personal Training
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/coaching/perte-de-poids"
+                  className="transition-colors hover:text-mp-neon"
+                >
+                  Perte de Poids
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/coaching/preparation-ironman"
+                  className="transition-colors hover:text-mp-neon"
+                >
+                  Préparation IRONMAN
+                </Link>
+              </li>
+              <li>
+                <Link href="/coaching/debutant" className="transition-colors hover:text-mp-neon">
+                  Débutant
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 

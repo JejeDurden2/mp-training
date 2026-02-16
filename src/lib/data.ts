@@ -39,7 +39,7 @@ export const businessInfo = {
   },
   seo: {
     rating: 5,
-    reviewCount: 25,
+    reviewCount: 26,
   },
 };
 
@@ -380,6 +380,25 @@ export const faqItems = [
       'Tout à fait ! Léo et Yann ont des spécialités complémentaires (force/musculation pour Léo, endurance/performance pour Yann). Lors de notre premier échange, nous vous orienterons vers le coach le plus adapté à vos objectifs, mais le choix final vous appartient.',
   },
 ];
+
+// Legal Information
+export const legalInfo = {
+  nomCommercial: 'MP TRAINING',
+  formeJuridique: 'Entrepreneur individuel',
+  siren: '924 330 871',
+  siret: '924 330 871 00014',
+  tva: 'FR81924330871',
+  rcs: 'Non inscrit',
+  rne: 'Inscrit (le 04/12/2023)',
+  dateCreation: '04/12/2023',
+  directeurPublication: 'Léo Paulet-Volpini',
+  siegeSocial: {
+    street: '350 Chemin de Stao-Soubran',
+    postalCode: '06340',
+    city: 'La Trinité',
+    country: 'France',
+  },
+};
 
 // Testimonials (Example - Real ones will be added once client provides)
 export const testimonials = [

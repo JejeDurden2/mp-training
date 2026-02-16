@@ -22,7 +22,7 @@ const inter = Inter({
 
 // MP Training Metadata
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.mptraining.fr'),
+  metadataBase: new URL('https://mptraining.fr'),
   title: {
     template: '%s | MP Training Nice',
     default: "MP Training Nice | Coaching Privé & Personal Training d'Excellence",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'fr_FR',
-    url: 'https://www.mptraining.fr',
+    url: 'https://mptraining.fr',
     siteName: 'MP Training Nice',
     title: "MP Training Nice | Coaching Privé & Personal Training d'Excellence",
     description:
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: 'https://www.mptraining.fr',
+    canonical: 'https://mptraining.fr',
   },
 
   category: 'health & fitness',

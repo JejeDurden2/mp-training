@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
-import { businessInfo } from '@/lib/data';
+import { businessInfo, legalInfo } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: 'Mentions Légales',
@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   robots: {
     index: false,
     follow: true,
+  },
+  alternates: {
+    canonical: 'https://mptraining.fr/mentions-legales',
   },
 };
 
@@ -34,17 +37,52 @@ export default function MentionsLegales() {
               Éditeur du site
             </h2>
             <p>
-              <strong className="text-mp-white">{businessInfo.name}</strong>
+              <strong className="text-mp-white">
+                {legalInfo.nomCommercial}
+              </strong>
+              <br />
+              Forme juridique : {legalInfo.formeJuridique}
+              <br />
+              SIRET : {legalInfo.siret}
+              <br />
+              SIREN : {legalInfo.siren}
+              <br />
+              N° TVA intracommunautaire : {legalInfo.tva}
+              <br />
+              Date de création : {legalInfo.dateCreation}
+              <br />
+              RCS : {legalInfo.rcs}
+              <br />
+              RNE : {legalInfo.rne}
+            </p>
+            <p className="mt-4">
+              <strong className="text-mp-white">Siège social :</strong>
+              <br />
+              {legalInfo.siegeSocial.street}
+              <br />
+              {legalInfo.siegeSocial.postalCode} {legalInfo.siegeSocial.city},{' '}
+              {legalInfo.siegeSocial.country}
+            </p>
+            <p className="mt-4">
+              <strong className="text-mp-white">Établissement principal :</strong>
               <br />
               {businessInfo.address.street}
               <br />
               {businessInfo.address.postalCode} {businessInfo.address.city},{' '}
               {businessInfo.address.country}
-              <br />
+            </p>
+            <p className="mt-4">
               Téléphone : {businessInfo.phone}
               <br />
               Email : {businessInfo.email}
             </p>
+          </section>
+
+          <section>
+            <h2 className="mb-4 font-heading text-2xl uppercase tracking-wider text-mp-white">
+              Directeur de la publication
+            </h2>
+            <p>{legalInfo.directeurPublication}</p>
           </section>
 
           <section>

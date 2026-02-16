@@ -1,5 +1,5 @@
 import { Navigation, Footer } from '@/components/layout';
-import { Hero, Studio, Services, Coaches, Contact } from '@/components/sections';
+import { Hero, Studio, Services, Coaches, FAQ, Contact } from '@/components/sections';
 import { JsonLd } from '@/components/seo/JsonLd';
 
 export default function Home() {
@@ -12,6 +12,7 @@ export default function Home() {
         <Studio />
         <Services />
         <Coaches />
+        <FAQ />
         <Contact />
       </main>
       <Footer />

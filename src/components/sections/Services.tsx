@@ -114,7 +114,7 @@ export function Services() {
 
               {/* CTA */}
               <Button
-                href="#contact"
+                href={`/coaching/${service.id === 'athletic-prep' ? 'preparation-athletique' : service.id}`}
                 variant={service.featured ? 'primary' : 'secondary'}
                 className="mt-auto w-full"
               >
