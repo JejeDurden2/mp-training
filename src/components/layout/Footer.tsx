@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Phone, MapPin } from 'lucide-react';
+import { Instagram, Phone, MapPin, Star } from 'lucide-react';
 import { businessInfo, coaches } from '@/lib/data';
+import { servicePages } from '@/lib/data/service-pages';
+import { personaPages } from '@/lib/data/personas';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -44,6 +46,7 @@ export function Footer() {
                 <li key={coach.id}>
                   <a
                     href={`tel:${coach.phoneFormatted}`}
+                    aria-label={`Appeler ${coach.name}`}
                     className="flex items-center gap-2 transition-colors hover:text-mp-neon"
                   >
                     <Phone size={16} className="text-mp-neon" />
@@ -62,6 +65,17 @@ export function Footer() {
                   {businessInfo.social.instagramHandle}
                 </a>
               </li>
+              <li>
+                <a
+                  href={businessInfo.social.googleReviews}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 transition-colors hover:text-mp-neon"
+                >
+                  <Star size={16} className="text-mp-neon" />
+                  Avis Google — {businessInfo.seo.rating}/5
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -70,42 +84,29 @@ export function Footer() {
             <h3 className="mb-4 mt-2 font-heading text-lg uppercase tracking-wider text-mp-white md:mt-0">
               Coaching
             </h3>
-            <ul className="space-y-2 font-body text-sm text-mp-white/70">
-              <li>
-                <Link href="/coaching" className="transition-colors hover:text-mp-neon">
-                  Tous nos programmes
-                </Link>
-              </li>
-              <li>
+            <div className="grid grid-cols-2 gap-x-6 gap-y-2 font-body text-sm text-mp-white/70">
+              <Link href="/coaching" className="col-span-2 transition-colors hover:text-mp-neon">
+                Tous nos programmes
+              </Link>
+              {servicePages.map((sp) => (
                 <Link
-                  href="/coaching/personal-training"
+                  key={sp.slug}
+                  href={`/coaching/${sp.slug}`}
                   className="transition-colors hover:text-mp-neon"
                 >
-                  Personal Training
+                  {sp.seo.h1.replace(' à Nice', '')}
                 </Link>
-              </li>
-              <li>
+              ))}
+              {personaPages.map((pp) => (
                 <Link
-                  href="/coaching/perte-de-poids"
+                  key={pp.slug}
+                  href={`/coaching/${pp.slug}`}
                   className="transition-colors hover:text-mp-neon"
                 >
-                  Perte de Poids
+                  {pp.seo.h1.replace(' à Nice', '')}
                 </Link>
-              </li>
-              <li>
-                <Link
-                  href="/coaching/preparation-ironman"
-                  className="transition-colors hover:text-mp-neon"
-                >
-                  Préparation IRONMAN
-                </Link>
-              </li>
-              <li>
-                <Link href="/coaching/debutant" className="transition-colors hover:text-mp-neon">
-                  Débutant
-                </Link>
-              </li>
-            </ul>
+              ))}
+            </div>
           </div>
         </div>
 

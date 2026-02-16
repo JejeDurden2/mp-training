@@ -95,6 +95,7 @@ export function Contact() {
                     <a
                       key={coach.id}
                       href={`tel:${coach.phoneFormatted}`}
+                      aria-label={`Appeler ${coach.name}`}
                       className="mt-1 block font-body text-mp-white/70 transition-colors hover:text-mp-neon"
                     >
                       {coach.name} — {coach.phone}

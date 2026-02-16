@@ -45,9 +45,32 @@ const personaIcons: Record<string, string> = {
   'sportif-amateur': 'activity',
 };
 
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Accueil',
+      item: 'https://mptraining.fr',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Coaching',
+      item: 'https://mptraining.fr/coaching',
+    },
+  ],
+};
+
 export default function CoachingHub() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Navigation />
       <main>
         {/* Hero */}

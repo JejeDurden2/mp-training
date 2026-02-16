@@ -108,6 +108,8 @@ export default function RootLayout({
   return (
     <html lang="fr" className={`${bebasNeue.variable} ${inter.variable}`}>
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <Script
           id="gtm-script"
           strategy="afterInteractive"

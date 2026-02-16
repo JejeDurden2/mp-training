@@ -2,10 +2,15 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import dynamic from 'next/dynamic';
 import { Section, SectionHeader } from '@/components/ui/Section';
 import { NeonIcon } from '@/components/ui/NeonIcon';
-import { Lightbox } from '@/components/ui/Lightbox';
 import { studioFeatures, studioImages } from '@/lib/data';
+
+const Lightbox = dynamic(
+  () => import('@/components/ui/Lightbox').then((m) => m.Lightbox),
+  { ssr: false },
+);
 
 export function Studio() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
