@@ -178,6 +178,7 @@ export default function TarifsPage(): React.ReactElement {
         <PricingSection
           serviceIds={services.map((s) => s.id)}
           showAllFeatures
+          showImages
         />
 
         {/* Advantages */}
